@@ -13,11 +13,8 @@ Just create a new configuration file `karabiner.human.json`:
   "fn": { "to": "fn", "to_if_alone": "left_command tab" },
   "fn spacebar": "left_command spacebar",
   "fn v": "$ open '/Applications/Visual Studio Code.app'",
-  "left_command left_control left_option left_shift spacebar": "left_command spacebar",
-  "caps_lock": {
-    "to": "left_command left_control left_option left_shift",
-    "to_if_alone": "100 caps_lock"
-  }
+  "hyper spacebar": "left_command spacebar",
+  "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" }
 }
 ```
 
@@ -26,6 +23,8 @@ And run the following command:
 ```bash
 npx karabiner-human-config
 ```
+
+And voila! From 5 lines to 140 lines of configuration in just a few seconds.
 
 <details><summary>Generated: karabiner.json</summary><br/><pre>
 {

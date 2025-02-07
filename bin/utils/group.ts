@@ -51,18 +51,30 @@ export const group = (
       string.indexOf("$") === -1 &&
       string.replace(/\s+/g, " ").trim().length
     ) {
-      result["~"] = string.replace(/\s+/g, " ").trim()
+      result["~"] = string
+        .replace(/\s+/g, " ")
+        .replace("hyper", "left_command left_control left_option left_shift")
+        .trim()
     }
   }
 
   const trimmedString = string.replace(/\s+/g, " ").trim()
 
   if (result["|"] && !result["$"]) {
-    result["~"] = trimmedString
+    result["~"] = trimmedString.replace(
+      "hyper",
+      "left_command left_control left_option left_shift",
+    )
   } else if (result["$"] && result["|"]) {
-    result["~"] = trimmedString
+    result["~"] = trimmedString.replace(
+      "hyper",
+      "left_command left_control left_option left_shift",
+    )
   } else if (!Object.keys(result).length) {
-    result["~"] = trimmedString
+    result["~"] = trimmedString.replace(
+      "hyper",
+      "left_command left_control left_option left_shift",
+    )
   }
 
   if (result["~"]) {
