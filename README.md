@@ -12,13 +12,13 @@ Just create a new configuration file `karabiner.human.json`:
 
 ```json
 {
+  // hyper key
+  "hyper spacebar": "left_command spacebar",
+  "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" },
   // function key
   "fn": { "to": "fn", "to_if_alone": "left_command tab" },
   "fn spacebar": "left_command spacebar",
-  "fn v": "$ open -a 'Visual Studio Code'",
-  // hyper key
-  "hyper spacebar": "left_command spacebar",
-  "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" }
+  "fn v": "$ open -a 'Visual Studio Code'"
 }
 ```
 
