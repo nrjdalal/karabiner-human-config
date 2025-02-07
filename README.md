@@ -10,7 +10,14 @@ Just create a new configuration file `karabiner.human.json`:
 
 ```json
 {
-  "fn spacebar": "left_command spacebar"
+  "fn": { "to": "fn", "to_if_alone": "left_command tab" },
+  "fn spacebar": "left_command spacebar",
+  "fn v": "$ open '/Applications/Visual Studio Code.app'",
+  "left_command left_control left_option left_shift spacebar": "left_command spacebar",
+  "caps_lock": {
+    "to": "left_command left_control left_option left_shift",
+    "to_if_alone": "100 caps_lock"
+  }
 }
 ```
 
@@ -98,15 +105,36 @@ Use `|` to specify a shell command.
             "manipulators": [
               {
                 "type": "basic",
+                "description": "fn",
+                "from": {
+                  "key_code": "fn"
+                },
+                "to": [
+                  {
+                    "key_code": "fn"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
                 "description": "fn spacebar",
                 "from": {
                   "key_code": "spacebar",
                   "modifiers": {
                     "mandatory": [
                       "fn"
-                    ],
-                    "optional": [
-                      "any"
                     ]
                   }
                 },
@@ -116,6 +144,81 @@ Use `|` to specify a shell command.
                     "modifiers": [
                       "left_command"
                     ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "fn v",
+                "from": {
+                  "key_code": "v",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open '/Applications/Visual Studio Code.app'"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "left_command left_control left_option left_shift spacebar",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "caps_lock",
+                "from": {
+                  "key_code": "caps_lock"
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "hold_down_milliseconds": 100,
+                    "key_code": "caps_lock"
                   }
                 ]
               }

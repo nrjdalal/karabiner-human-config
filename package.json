@@ -1,6 +1,6 @@
 {
   "name": "khc",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "A human-readable configuration generator for Karabiner-Elements",
   "keywords": [
     "elements",
