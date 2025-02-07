@@ -1,6 +1,6 @@
 {
-  "name": "karabiner-human-config",
-  "version": "0.0.15",
+  "name": "khc",
+  "version": "0.0.17",
   "description": "A human-readable configuration generator for Karabiner-Elements",
   "keywords": [
     "elements",
@@ -16,6 +16,8 @@
     "remapping",
     "shortcuts"
   ],
+  "homepage": "https://github.com/nrjdalal/karabiner-human-config#readme",
+  "bugs": "https://github.com/nrjdalal/karabiner-human-config/issues",
   "repository": "nrjdalal/karabiner-human-config",
   "license": "MIT",
   "author": {

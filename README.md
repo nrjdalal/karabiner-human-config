@@ -133,6 +133,8 @@ Use `|` to specify a shell command.
 }
 </pre></details>
 
+<br/>
+
 ## Advanced Usage for To Events
 
 ### Shell Commands
@@ -171,6 +173,124 @@ Use `$` to specify a shell command.
                 "to": [
                   {
                     "shell_command": "open -a 'Google Chrome'"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "name": "nrjdalal",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      }
+    }
+  ]
+}
+</pre></details>
+
+### Specify Delay and Flags
+
+Use `lazy`, `repeat`, `halt` to set flags. Or `number` to specify a delay.
+
+> Use only what you need. If you don't need a delay or any flags, don't specify them.
+
+```diff
+{
+-  "fn spacebar": "left_command spacebar"
++  "fn spacebar": "100 lazy repeat halt left_command spacebar"
+}
+```
+
+<details><summary>Generated: karabiner.json</summary><br/><pre>
+{
+  "global": {
+    "show_in_menu_bar": false
+  },
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "fn spacebar",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "lazy": true,
+                    "repeat": true,
+                    "halt": true,
+                    "hold_down_milliseconds": 100,
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "name": "nrjdalal",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      }
+    }
+  ]
+}
+</pre></details>
+
+### Specify Multiple Events
+
+Use object insetad of string `{ to: ..., to_if_alone: ... }` to specify multiple to events.
+
+```diff
+{
+-  "fn spacebar": "left_command spacebar"
++  "fn": { "to": "fn", "to_if_alone": "left_command tab" }
+}
+```
+
+<details><summary>Generated: karabiner.json</summary><br/><pre>
+{
+  "global": {
+    "show_in_menu_bar": false
+  },
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "fn",
+                "from": {
+                  "key_code": "fn"
+                },
+                "to": [
+                  {
+                    "key_code": "fn"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_command"
+                    ]
                   }
                 ]
               }
