@@ -5,7 +5,11 @@
     "from": {
       "any": "fn"
     },
-    "to": "fn",
+    "to": [
+      {
+        "any": "fn"
+      }
+    ],
     "to_if_alone": "left_command tab"
   },
   {
@@ -22,7 +26,11 @@
         ]
       }
     },
-    "to": "left_command spacebar"
+    "to": [
+      {
+        "any": "left_command spacebar"
+      }
+    ]
   },
   {
     "type": "basic",
@@ -35,7 +43,11 @@
         ]
       }
     },
-    "to": "$ open '/Applications/Visual Studio Code.app'"
+    "to": [
+      {
+        "shell_command": "open '/Applications/Visual Studio Code.app'"
+      }
+    ]
   },
   {
     "type": "basic",
@@ -48,7 +60,11 @@
         ]
       }
     },
-    "to": "left_command spacebar"
+    "to": [
+      {
+        "any": "left_command spacebar"
+      }
+    ]
   },
   {
     "type": "basic",
@@ -56,7 +72,11 @@
     "from": {
       "any": "caps_lock"
     },
-    "to": "hyper",
+    "to": [
+      {
+        "any": "hyper"
+      }
+    ],
     "to_if_alone": "100 caps_lock"
   },
   {
@@ -65,7 +85,11 @@
     "from": {
       "any": "fn"
     },
-    "to": "fn",
+    "to": [
+      {
+        "any": "fn"
+      }
+    ],
     "to_if_alone": "left_command tab",
     "conditions": [
       {

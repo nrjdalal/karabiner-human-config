@@ -13,6 +13,13 @@ const renameKeys = (
   return value
 }
 
+const splitAtFirstMatch = (str: string, search: string) => {
+  const parts = str.split(search)
+  return parts.length
+    ? [parts[0].trim(), str.slice(parts[0].length + search.length).trim()]
+    : [str.trim()]
+}
+
 const startsWithCapital = (str: string) => /^[A-Z]/.test(str)
 
 const transformObjectKey = <T, U>(
@@ -26,4 +33,10 @@ const transformObjectKey = <T, U>(
   }
 }
 
-export { regexifyBundleId, renameKeys, startsWithCapital, transformObjectKey }
+export {
+  regexifyBundleId,
+  renameKeys,
+  splitAtFirstMatch,
+  startsWithCapital,
+  transformObjectKey,
+}

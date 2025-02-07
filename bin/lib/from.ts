@@ -1,12 +1,14 @@
+import { splitAtFirstMatch } from "@/utils"
+
 export const from = (str: string) => {
-  str = str.replace(/\s+/g, " ").trim()
+  str = str.replace(/\s+/g, " ")
 
-  const [pre, post] = str.split("|")
+  const [pre, post] = splitAtFirstMatch(str, "|")
 
-  const preParts = pre.trim().split(" ")
+  const preParts = pre.split(" ")
   const any = preParts.pop()
   const mandatoryModifiers = preParts
-  const optionalModifiers = post ? post.trim().split(" ") : []
+  const optionalModifiers = post ? post.split(" ") : []
 
   const modifiers = {
     ...(mandatoryModifiers.length && { mandatory: mandatoryModifiers }),

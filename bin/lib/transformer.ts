@@ -9,6 +9,7 @@ import {
 import { manipulatorKeys } from "~/constants"
 import { bundleId as bid } from "bundle-id"
 import { from } from "./from"
+import { to } from "./to"
 
 const test = {
   fn: { t: "fn", a: "left_command tab" },
@@ -63,6 +64,7 @@ export const transformConfig = async ({
     }
 
     transformObjectKey(object, "from", from)
+    transformObjectKey(object, "to", to)
 
     result.push(object)
   }
