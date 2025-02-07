@@ -12,9 +12,9 @@ import { from } from "./from"
 
 const test = {
   fn: { t: "fn", a: "left_command tab" },
-  "fn spacebar test": "left_command spacebar",
+  "fn spacebar | test": "left_command spacebar",
   "fn v": "$ open '/Applications/Visual Studio Code.app'",
-  "hyper spacebar": "left_command spacebar",
+  "hyper | spacebar": "left_command spacebar",
   caps_lock: { t: "hyper", a: "100 caps_lock" },
   "Visual Studio Code": {
     fn: { t: "fn", a: "left_command tab" },

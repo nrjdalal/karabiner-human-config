@@ -1,25 +1,20 @@
 export const from = (str: string) => {
   str = str.replace(/\s+/g, " ").trim()
 
-  const pre = str.split("|")[0]
-  const post = str.split("|")[1]
+  const [pre, post] = str.split("|")
 
-  const mandatoryModifiers = pre.split(" ").slice(0, -1)
-  const optionalModifiers = post ? post.split(" ") : []
+  const preParts = pre.trim().split(" ")
+  const any = preParts.pop()
+  const mandatoryModifiers = preParts
+  const optionalModifiers = post ? post.trim().split(" ") : []
 
-  const result: any = {
-    any: pre.split(" ").pop(),
+  const modifiers = {
+    ...(mandatoryModifiers.length > 0 && { mandatory: mandatoryModifiers }),
+    ...(optionalModifiers.length > 0 && { optional: optionalModifiers }),
   }
 
-  if (mandatoryModifiers.length > 0 || optionalModifiers.length > 0) {
-    result.modifiers = {}
-    if (mandatoryModifiers.length > 0) {
-      result.modifiers.mandatory = mandatoryModifiers
-    }
-    if (optionalModifiers.length > 0) {
-      result.modifiers.optional = optionalModifiers
-    }
+  return {
+    any,
+    ...(Object.keys(modifiers).length > 0 && { modifiers }),
   }
-
-  return result
 }

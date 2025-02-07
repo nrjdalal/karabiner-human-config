@@ -10,13 +10,15 @@
   },
   {
     "type": "basic",
-    "description": "fn spacebar test",
+    "description": "fn spacebar | test",
     "from": {
-      "any": "test",
+      "any": "spacebar",
       "modifiers": {
         "mandatory": [
-          "fn",
-          "spacebar"
+          "fn"
+        ],
+        "optional": [
+          "test"
         ]
       }
     },
@@ -37,12 +39,12 @@
   },
   {
     "type": "basic",
-    "description": "hyper spacebar",
+    "description": "hyper | spacebar",
     "from": {
-      "any": "spacebar",
+      "any": "hyper",
       "modifiers": {
-        "mandatory": [
-          "hyper"
+        "optional": [
+          "spacebar"
         ]
       }
     },
