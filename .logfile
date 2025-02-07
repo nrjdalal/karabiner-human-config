@@ -1,0 +1,49 @@
+[
+  {
+    "type": "basic",
+    "description": "fn",
+    "from": "fn",
+    "to": "fn",
+    "to_if_alone": "left_command tab"
+  },
+  {
+    "type": "basic",
+    "description": "fn spacebar",
+    "from": "fn spacebar",
+    "to": "left_command spacebar"
+  },
+  {
+    "type": "basic",
+    "description": "fn v",
+    "from": "fn v",
+    "to": "$ open '/Applications/Visual Studio Code.app'"
+  },
+  {
+    "type": "basic",
+    "description": "hyper spacebar",
+    "from": "hyper spacebar",
+    "to": "left_command spacebar"
+  },
+  {
+    "type": "basic",
+    "description": "caps_lock",
+    "from": "caps_lock",
+    "to": "hyper",
+    "to_if_alone": "100 caps_lock"
+  },
+  {
+    "type": "basic",
+    "description": "visual studio code fn",
+    "from": "fn",
+    "to": "fn",
+    "to_if_alone": "left_command tab",
+    "conditions": [
+      {
+        "type": "frontmost_application_if",
+        "bundle_identifiers": [
+          "^com\\.microsoft\\.VSCode$"
+        ]
+      }
+    ]
+  }
+]

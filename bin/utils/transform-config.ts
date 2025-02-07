@@ -1,3 +1,5 @@
+import { promises as fs } from "fs"
+import { join } from "path"
 import { startsWithCapital } from "@/utils"
 import { manipulatorMappings } from "@/utils/mappings"
 import { bundleId } from "bundle-id"
@@ -30,7 +32,7 @@ export const transformConfig = async ({
       const appIdentifier = await bundleId(key)
       const appConfig = await transformConfig({
         appName: key.toLowerCase(),
-        appIdentifier: appIdentifier,
+        appIdentifier: `^${appIdentifier.replace(/\./g, "\\.")}$`,
         config: value,
       })
       result.push(...appConfig)
@@ -58,8 +60,14 @@ export const transformConfig = async ({
   return result
 }
 
-console.log(
-  await transformConfig({
-    config: test,
-  }),
+await fs.writeFile(
+  join(process.cwd(), ".logfile"),
+  JSON.stringify(
+    await transformConfig({
+      config: test,
+    }),
+    null,
+    2,
+  ),
+  "utf-8",
 )
