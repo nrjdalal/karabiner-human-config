@@ -1,8 +1,8 @@
 import fs from "fs/promises"
 import { join } from "path"
-import { startsWithCapital } from "@/utils"
+import { regexifyBundleId, startsWithCapital } from "@/utils"
 import { manipulatorMappings } from "@/utils/mappings"
-import { bundleId } from "bundle-id"
+import { bundleId as bid } from "bundle-id"
 
 const test = {
   fn: { to: "fn", alone: "left_command tab" },
@@ -16,12 +16,12 @@ const test = {
 }
 
 export const transformConfig = async ({
-  appName,
-  appIdentifier,
+  app,
+  bundleId,
   config,
 }: {
-  appName?: string
-  appIdentifier?: string
+  app?: string
+  bundleId?: string
   config: { [key: string]: any }
 }): Promise<any[]> => {
   const result = []
@@ -30,10 +30,9 @@ export const transformConfig = async ({
     if (typeof value === "string") value = { to: value }
 
     if (startsWithCapital(key)) {
-      const appIdentifier = await bundleId(key)
       const appConfig = await transformConfig({
-        appName: key.toLowerCase(),
-        appIdentifier: `^${appIdentifier.replace(/\./g, "\\.")}$`,
+        app: key.toLowerCase(),
+        bundleId: regexifyBundleId(await bid(key)),
         config: value,
       })
       result.push(...appConfig)
@@ -44,14 +43,14 @@ export const transformConfig = async ({
 
     result.push({
       type: "basic",
-      description: appIdentifier ? `${appName} ${key}` : key,
+      description: bundleId ? `${app} ${key}` : key,
       from: key,
       ...value,
-      ...(appIdentifier && {
+      ...(bundleId && {
         conditions: [
           {
             type: "frontmost_application_if",
-            bundle_identifiers: [appIdentifier],
+            bundle_identifiers: [bundleId],
           },
         ],
       }),
