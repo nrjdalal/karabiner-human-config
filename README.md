@@ -181,7 +181,7 @@ You can then manually copy and paste it into your `karabiner.json` file.
 
 ### Optional Modifiers
 
-Use `|` to specify a shell command.
+Use `|` to specify an optional modifier.
 
 ```diff
 {
