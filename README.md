@@ -98,7 +98,7 @@ And voila! From 5 lines to 140 lines of configuration in just a few seconds.
                 },
                 "to": [
                   {
-                    "shell_command": "open '/Applications/Visual Studio Code.app'"
+                    "shell_command": "open -a 'Visual Studio Code'"
                   }
                 ]
               }
