@@ -8,11 +8,15 @@ Creating configuration files for [Karabiner-Elements](https://github.com/pqrs-or
 
 Just create a new configuration file `karabiner.human.json`:
 
+- Feel free to use comments. And custom keys like `hyper`, etc.
+
 ```json
 {
+  // function key
   "fn": { "to": "fn", "to_if_alone": "left_command tab" },
   "fn spacebar": "left_command spacebar",
   "fn v": "$ open -a 'Visual Studio Code'",
+  // hyper key
   "hyper spacebar": "left_command spacebar",
   "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" }
 }
@@ -174,8 +178,6 @@ And voila! From 7 lines to 141 lines of configuration in just a few seconds.
 
 The generated configuration, will be logged to the console.
 You can then manually copy and paste it into your `karabiner.json` file.
-
-<!-- For automatic writing of the generated configuration to your `karabiner.json` file, use the `-w` flag. -->
 
 ## Advanced Usage for From Events
 

@@ -5,6 +5,7 @@ import path from "node:path"
 import { parseArgs } from "node:util"
 import { group } from "@/utils/group"
 import { author, name, version } from "~/package.json"
+import stripJsonComments from "strip-json-comments"
 
 const helpMessage = `Version:
   ${name}@${version}
@@ -68,7 +69,9 @@ const main = async () => {
         )
       }
 
-      const userConfig = JSON.parse(fs.readFileSync(config.input, "utf-8"))
+      const userConfig = JSON.parse(
+        stripJsonComments(fs.readFileSync(config.input, "utf-8")),
+      )
 
       const rules = []
 

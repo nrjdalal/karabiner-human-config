@@ -1,6 +1,6 @@
 {
   "name": "karabiner-human-config",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A human-readable configuration generator for Karabiner-Elements",
   "keywords": [
     "elements",
@@ -52,6 +52,9 @@
   "lint-staged": {
     "*": "prettier --write --ignore-unknown",
     "package.json": "sort-package-json"
+  },
+  "dependencies": {
+    "strip-json-comments": "^5.0.1"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
