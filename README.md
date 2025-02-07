@@ -40,71 +40,6 @@ npx khc
             "manipulators": [
               {
                 "type": "basic",
-                "description": "fn spacebar",
-                "from": {
-                  "key_code": "spacebar",
-                  "modifiers": {
-                    "mandatory": [
-                      "fn"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "spacebar",
-                    "modifiers": [
-                      "left_command"
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "name": "nrjdalal",
-      "selected": true,
-      "virtual_hid_keyboard": {
-        "keyboard_type_v2": "ansi"
-      }
-    }
-  ]
-}
-</pre></details>
-
-<br/>
-
-The generated configuration, will be logged to the console.
-You can then manually copy and paste it into your `karabiner.json` file.
-
-<!-- For automatic writing of the generated configuration to your `karabiner.json` file, use the `-w` flag. -->
-
-## Advanced Usage for From Events
-
-### Optional Modifiers
-
-Use `|` to specify a shell command.
-
-```diff
-{
--  "fn spacebar: "left_command spacebar"
-+  "fn spacebar | any": "left_command spacebar"
-}
-```
-
-<details><summary>Generated: karabiner.json</summary><br/><pre>
-{
-  "global": {
-    "show_in_menu_bar": false
-  },
-  "profiles": [
-    {
-      "complex_modifications": {
-        "rules": [
-          {
-            "manipulators": [
-              {
-                "type": "basic",
                 "description": "fn",
                 "from": {
                   "key_code": "fn"
@@ -219,6 +154,74 @@ Use `|` to specify a shell command.
                   {
                     "hold_down_milliseconds": 100,
                     "key_code": "caps_lock"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "name": "nrjdalal",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      }
+    }
+  ]
+}
+</pre></details>
+
+<br/>
+
+The generated configuration, will be logged to the console.
+You can then manually copy and paste it into your `karabiner.json` file.
+
+<!-- For automatic writing of the generated configuration to your `karabiner.json` file, use the `-w` flag. -->
+
+## Advanced Usage for From Events
+
+### Optional Modifiers
+
+Use `|` to specify a shell command.
+
+```diff
+{
+-  "fn spacebar: "left_command spacebar"
++  "fn spacebar | any": "left_command spacebar"
+}
+```
+
+<details><summary>Generated: karabiner.json</summary><br/><pre>
+{
+  "global": {
+    "show_in_menu_bar": false
+  },
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "fn spacebar",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_command"
+                    ]
                   }
                 ]
               }
