@@ -414,3 +414,19 @@ Use object insetad of string `{ to: ..., to_if_alone: ... }` to specify multiple
   ]
 }
 </pre></details>
+
+<br/>
+
+## Future Considerations
+
+- support for variables
+- app specific configurations
+
+```json
+{
+  "fn spacebar": "left_command spacebar",
+  "Google Chrome": {
+    "fn spacebar": "..."
+  }
+}
+```
