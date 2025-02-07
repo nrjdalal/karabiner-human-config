@@ -1,7 +1,7 @@
 import fs from "fs/promises"
 import { join } from "path"
-import { regexifyBundleId, startsWithCapital } from "@/utils"
-import { manipulatorMappings } from "@/utils/mappings"
+import { regexifyBundleId, renameKeys, startsWithCapital } from "@/utils"
+import { manipulatorKeys } from "~/constants"
 import { bundleId as bid } from "bundle-id"
 
 const test = {
@@ -39,7 +39,7 @@ export const transformConfig = async ({
       continue
     }
 
-    value = manipulatorMappings(value)
+    value = renameKeys(value, manipulatorKeys)
 
     result.push({
       type: "basic",
