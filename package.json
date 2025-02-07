@@ -1,8 +1,21 @@
 {
-  "name": "khc",
-  "version": "0.0.8",
-  "description": "Generate Karabiner-Elements configuration files with human-readable syntax.",
-  "keywords": [],
+  "name": "karabiner-human-config",
+  "version": "0.0.15",
+  "description": "A human-readable configuration generator for Karabiner-Elements",
+  "keywords": [
+    "elements",
+    "karabiner-elements",
+    "karabiner",
+    "keyboard-mapping",
+    "keyboard-remapping",
+    "keyboard-shortcuts",
+    "keyboard",
+    "mac",
+    "macos",
+    "mapping",
+    "remapping",
+    "shortcuts"
+  ],
   "repository": "nrjdalal/karabiner-human-config",
   "license": "MIT",
   "author": {

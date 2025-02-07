@@ -9,5 +9,4 @@ export default defineConfig({
   format: ["esm"],
   minify: true,
   outDir: "dist",
-  sourcemap: true,
 })
