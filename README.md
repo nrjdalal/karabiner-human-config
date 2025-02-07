@@ -12,7 +12,7 @@ Just create a new configuration file `karabiner.human.json`:
 {
   "fn": { "to": "fn", "to_if_alone": "left_command tab" },
   "fn spacebar": "left_command spacebar",
-  "fn v": "$ open '/Applications/Visual Studio Code.app'",
+  "fn v": "$ open -a 'Visual Studio Code'",
   "hyper spacebar": "left_command spacebar",
   "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" }
 }
