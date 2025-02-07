@@ -7,7 +7,6 @@
 /*-error.log*
 
 # lockfiles
-karabiner.human.json
 yarn.lock
 package-lock.json
 pnpm-lock.yaml
