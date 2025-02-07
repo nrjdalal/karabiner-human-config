@@ -9,12 +9,12 @@ export const from = (str: string) => {
   const optionalModifiers = post ? post.trim().split(" ") : []
 
   const modifiers = {
-    ...(mandatoryModifiers.length > 0 && { mandatory: mandatoryModifiers }),
-    ...(optionalModifiers.length > 0 && { optional: optionalModifiers }),
+    ...(mandatoryModifiers.length && { mandatory: mandatoryModifiers }),
+    ...(optionalModifiers.length && { optional: optionalModifiers }),
   }
 
   return {
     any,
-    ...(Object.keys(modifiers).length > 0 && { modifiers }),
+    ...(Object.keys(modifiers).length && { modifiers }),
   }
 }
