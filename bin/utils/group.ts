@@ -108,7 +108,14 @@ export const group = (
   if (result["|"]) {
     result["modifiers_optional"] =
       typeof result["|"] === "string"
-        ? result["|"].replace(/\s+/g, " ").trim().split(" ")
+        ? result["|"]
+            .replace(/\s+/g, " ")
+            .replace(
+              "hyper",
+              "left_command left_control left_option left_shift",
+            )
+            .trim()
+            .split(" ")
         : []
     result["|"] = null
   }
