@@ -28,6 +28,7 @@ export const transformConfig = async ({
 
   for (let [key, value] of Object.entries(config)) {
     if (typeof value === "string") value = { to: value }
+
     if (startsWithCapital(key)) {
       const appIdentifier = await bundleId(key)
       const appConfig = await transformConfig({
