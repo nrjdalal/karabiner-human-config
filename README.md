@@ -24,7 +24,7 @@ Just create a new configuration file `karabiner.human.json`:
 And run the following command:
 
 ```bash
-npx khc
+npx karabiner-human-config
 ```
 
 <details><summary>Generated: karabiner.json</summary><br/><pre>
