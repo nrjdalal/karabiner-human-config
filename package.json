@@ -1,5 +1,5 @@
 {
-  "name": "khc",
+  "name": "karabiner-human-config",
   "version": "0.0.19",
   "description": "A human-readable configuration generator for Karabiner-Elements",
   "keywords": [
