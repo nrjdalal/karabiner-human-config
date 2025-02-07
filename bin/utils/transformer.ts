@@ -5,13 +5,13 @@ import { manipulatorKeys } from "~/constants"
 import { bundleId as bid } from "bundle-id"
 
 const test = {
-  fn: { to: "fn", alone: "left_command tab" },
+  fn: { t: "fn", a: "left_command tab" },
   "fn spacebar": "left_command spacebar",
   "fn v": "$ open '/Applications/Visual Studio Code.app'",
   "hyper spacebar": "left_command spacebar",
-  caps_lock: { to: "hyper", alone: "100 caps_lock" },
+  caps_lock: { t: "hyper", a: "100 caps_lock" },
   "Visual Studio Code": {
-    fn: { to: "fn", alone: "left_command tab" },
+    fn: { t: "fn", a: "left_command tab" },
   },
 }
 
