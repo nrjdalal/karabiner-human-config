@@ -1,7 +1,7 @@
 {
   "name": "khc",
-  "version": "0.0.3",
-  "description": "",
+  "version": "0.0.8",
+  "description": "Generate Karabiner-Elements configuration files with human-readable syntax.",
   "keywords": [],
   "repository": "nrjdalal/karabiner-human-config",
   "license": "MIT",
@@ -13,7 +13,7 @@
   "type": "module",
   "bin": {
     "karabiner-human-config": "dist/index.js",
-    "kc": "dist/index.js"
+    "khc": "dist/index.js"
   },
   "files": [
     "dist"
