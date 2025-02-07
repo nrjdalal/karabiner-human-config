@@ -1,0 +1,5 @@
+- fn: |
+    _self:
+      - alone: left_command tab
+    spacebar: left_command spacebar
+    v:

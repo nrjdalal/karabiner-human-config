@@ -1,0 +1,55 @@
+{
+  "name": "khc",
+  "version": "0.0.3",
+  "description": "",
+  "keywords": [],
+  "repository": "nrjdalal/karabiner-human-config",
+  "license": "MIT",
+  "author": {
+    "name": "Neeraj Dalal",
+    "email": "admin@nrjdalal.com",
+    "url": "https://nrjdalal.com"
+  },
+  "type": "module",
+  "bin": {
+    "karabiner-human-config": "dist/index.js",
+    "kc": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "cli": "bun run build && node dist/index.js",
+    "dev": "tsup --watch",
+    "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then npx simple-git-hooks; fi",
+    "publish:latest": "NODE_ENV=production changeset publish"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx commitlint --edit $1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown",
+    "package.json": "sort-package-json"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.10",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
+    "@types/node": "^22.10.1",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.4.2",
+    "simple-git-hooks": "^2.11.1",
+    "sort-package-json": "^2.14.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
