@@ -1,4 +1,4 @@
-import { promises as fs } from "fs"
+import fs from "fs/promises"
 import { join } from "path"
 import { startsWithCapital } from "@/utils"
 import { manipulatorMappings } from "@/utils/mappings"
