@@ -24,7 +24,7 @@ And run the following command:
 npx karabiner-human-config
 ```
 
-And voila! From 5 lines to 140 lines of configuration in just a few seconds.
+And voila! From 7 lines to 141 lines of configuration in just a few seconds.
 
 <details><summary>Generated: karabiner.json</summary><br/><pre>
 {
