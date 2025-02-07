@@ -15,4 +15,15 @@ const renameKeys = (
 
 const startsWithCapital = (str: string) => /^[A-Z]/.test(str)
 
-export { regexifyBundleId, renameKeys, startsWithCapital }
+const transformObjectKey = <T, U>(
+  obj: { [key: string]: T },
+  key: string,
+  func: (value: T) => U,
+): void => {
+  const value = obj[key]
+  if (value !== undefined) {
+    obj[key] = func(value) as any
+  }
+}
+
+export { regexifyBundleId, renameKeys, startsWithCapital, transformObjectKey }

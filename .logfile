@@ -2,39 +2,67 @@
   {
     "type": "basic",
     "description": "fn",
-    "from": "fn",
+    "from": {
+      "any": "fn"
+    },
     "to": "fn",
     "to_if_alone": "left_command tab"
   },
   {
     "type": "basic",
-    "description": "fn spacebar",
-    "from": "fn spacebar",
+    "description": "fn spacebar test",
+    "from": {
+      "any": "test",
+      "modifiers": {
+        "mandatory": [
+          "fn",
+          "spacebar"
+        ]
+      }
+    },
     "to": "left_command spacebar"
   },
   {
     "type": "basic",
     "description": "fn v",
-    "from": "fn v",
+    "from": {
+      "any": "v",
+      "modifiers": {
+        "mandatory": [
+          "fn"
+        ]
+      }
+    },
     "to": "$ open '/Applications/Visual Studio Code.app'"
   },
   {
     "type": "basic",
     "description": "hyper spacebar",
-    "from": "hyper spacebar",
+    "from": {
+      "any": "spacebar",
+      "modifiers": {
+        "mandatory": [
+          "hyper"
+        ]
+      }
+    },
     "to": "left_command spacebar"
   },
   {
     "type": "basic",
     "description": "caps_lock",
-    "from": "caps_lock",
+    "from": {
+      "any": "caps_lock"
+    },
     "to": "hyper",
     "to_if_alone": "100 caps_lock"
   },
   {
     "type": "basic",
     "description": "visual studio code fn",
-    "from": "fn",
+    "from": {
+      "any": "fn"
+    },
     "to": "fn",
     "to_if_alone": "left_command tab",
     "conditions": [

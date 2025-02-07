@@ -1,12 +1,18 @@
 import fs from "fs/promises"
 import { join } from "path"
-import { regexifyBundleId, renameKeys, startsWithCapital } from "@/utils"
+import {
+  regexifyBundleId,
+  renameKeys,
+  startsWithCapital,
+  transformObjectKey,
+} from "@/utils"
 import { manipulatorKeys } from "~/constants"
 import { bundleId as bid } from "bundle-id"
+import { from } from "./from"
 
 const test = {
   fn: { t: "fn", a: "left_command tab" },
-  "fn spacebar": "left_command spacebar",
+  "fn spacebar test": "left_command spacebar",
   "fn v": "$ open '/Applications/Visual Studio Code.app'",
   "hyper spacebar": "left_command spacebar",
   caps_lock: { t: "hyper", a: "100 caps_lock" },
@@ -41,7 +47,7 @@ export const transformConfig = async ({
 
     value = renameKeys(value, manipulatorKeys)
 
-    result.push({
+    const object = {
       type: "basic",
       description: bundleId ? `${app} ${key}` : key,
       from: key,
@@ -54,7 +60,11 @@ export const transformConfig = async ({
           },
         ],
       }),
-    })
+    }
+
+    transformObjectKey(object, "from", from)
+
+    result.push(object)
   }
 
   return result
