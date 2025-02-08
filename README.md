@@ -545,7 +545,7 @@ Instead of strings, use objects like `{ to: ..., to_if_alone: ... }` to specify 
 ### Custom Aliases
 
 - `hyper` for `left_command left_control left_option left_shift`
-- `left_command` as `cmd` `lcmd` `l_cmd` `left_cmd` `lcommand` `l_command` etc.
+- `left_command` as `cmd` `lcmd` `l_cmd` `left_cmd` `lcommand` `l_command`
 
 Check and add [custom-aliases.ts](constants/custom-aliases.ts) for more.
 
@@ -561,4 +561,4 @@ Check and add [manipulator-keys.ts](constants/manipulator-keys.ts) for more.
 
 ## Future Considerations
 
-- you tell me, I just got to know about Karabiner-Elements two days before publishing this on Feb 07, 2025
+- You tell me, I just got to know about Karabiner-Elements two days before publishing this on Feb 07, 2025.
