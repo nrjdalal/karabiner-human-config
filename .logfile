@@ -63,12 +63,69 @@
           {
             "manipulators": [
               {
-                "fn": {
-                  "to": "fn",
-                  "to_if_alone": "left_command tab"
+                "type": "basic",
+                "description": "fn",
+                "from": {
+                  "key_code": "fn"
                 },
-                "fn spacebar": "left_command spacebar",
-                "fn v": "$ open '/Applications/Visual Studio Code.app'"
+                "to": [
+                  {
+                    "key_code": "fn"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "fn spacebar",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "fn v",
+                "from": {
+                  "key_code": "v",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'Visual Studio Code'"
+                  }
+                ]
               }
             ]
           },
