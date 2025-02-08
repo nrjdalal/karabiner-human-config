@@ -1,4 +1,4 @@
-import { extractFlags, splitAtFirstMatch } from "@/utils"
+import { extractFlags, extractTimeout, splitAtFirstMatch } from "@/utils"
 
 export const toIfHeldDown = (
   input:
@@ -9,29 +9,26 @@ export const toIfHeldDown = (
 ) => {
   if (typeof input === "object") return input
 
-  input = input.trim()
-
   const [pre, post] = splitAtFirstMatch(input, "$")
-  const [cmd, flags] = extractFlags(pre)
+  const [rest, flags] = extractFlags(pre)
+  const [modifiers, ms] = extractTimeout(rest.join(" "))
 
   if (post) {
     return [
       {
         shell_command: post,
         ...flags,
+        ...ms,
       },
     ]
   }
 
-  const any = cmd.pop()
-
-  const modifiers = cmd
-
   return [
     {
-      any,
+      any: modifiers.pop(),
       ...(modifiers.length && { modifiers }),
       ...flags,
+      ...ms,
     },
   ]
 }

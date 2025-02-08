@@ -19,7 +19,7 @@ const test = {
   "fn spacebar | test": "lazy left_command spacebar",
   "fn v": "halt $ open '/Applications/Visual Studio Code.app'",
   "hyper | spacebar": "left_command spacebar",
-  caps_lock: { t: "hyper", a: "100 caps_lock" },
+  caps_lock: { t: "100 hyper", a: "100 caps_lock" },
   "Visual Studio Code": {
     fn: { t: "fn", a: "left_command tab" },
   },

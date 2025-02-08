@@ -16,6 +16,22 @@ const extractFlags = (str: string) => {
   return [cleanStr, flagsObj] as [string[], { [key: string]: boolean } | {}]
 }
 
+const extractTimeout = (str: string) => {
+  str = str.replace(/\s+/g, " ")
+  const parts = str.split(" ")
+  const timeoutParts = parts.filter((part) => parseInt(part) > 9)
+  const timeout =
+    timeoutParts.length === 1
+      ? {
+          hold_down_milliseconds: parseInt(timeoutParts[0]),
+        }
+      : {}
+  const cleanStr = parts.filter(
+    (part) => isNaN(parseInt(part)) || parseInt(part) < 10,
+  )
+  return [cleanStr, timeout] as [string[], { [key: string]: number } | {}]
+}
+
 const regexifyBundleId = (str: string) => `^${str.replace(/\./g, "\\.")}$`
 
 const renameKeys = (
@@ -53,6 +69,7 @@ const transformObjectKey = <T, U>(
 
 export {
   extractFlags,
+  extractTimeout,
   regexifyBundleId,
   renameKeys,
   splitAtFirstMatch,
