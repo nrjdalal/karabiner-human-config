@@ -2,9 +2,9 @@
 
 ## The easiest way to create Karabiner-Elements configuration files, ever!
 
-[![npm](https://img.shields.io/npm/v/karabiner-human-config?color=red&logo=npm)](https://www.npmjs.com/package/gitpick)
-[![npm](https://img.shields.io/npm/dt/karabiner-human-config?color=red&logo=npm)](https://www.npmjs.com/package/gitpick)
-[![GitHub](https://img.shields.io/github/stars/nrjdalal/karabiner-human-config?color=blue)](https://github.com/nrjdalal/gitpick)
+[![npm](https://img.shields.io/npm/v/karabiner-human-config?color=red&logo=npm)](https://www.npmjs.com/package/karabiner-human-config)
+[![npm](https://img.shields.io/npm/dt/karabiner-human-config?color=red&logo=npm)](https://www.npmjs.com/package/karabiner-human-config)
+[![GitHub](https://img.shields.io/github/stars/nrjdalal/karabiner-human-config?color=blue)](https://github.com/nrjdalal/karabiner-human-config)
 
 Creating configuration files for [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) can be challenging. With Karabiner-Human-Config (KHC), you can effortlessly generate your own configuration files using human-readable/understandable syntax.
 
