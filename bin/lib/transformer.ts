@@ -46,7 +46,12 @@ export const rules = async ({
       const rest = Object.fromEntries(
         Object.entries(value).map(([k, v]) => [`${key} ${k}`, v]),
       )
-      result.push(...(await rules({ config: { ..._self, ...rest } })))
+      const transformedConfig = await rules({
+        app,
+        bundleId,
+        config: { ..._self, ...rest },
+      })
+      result.push(...transformedConfig)
       continue
     }
 

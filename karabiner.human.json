@@ -10,6 +10,9 @@
   },
   // application group
   "Visual Studio Code": {
-    "fn grave_accent_and_tilde": "left_control grave_accent_and_tilde"
+    "fn": {
+      "_self": { "t": "fn", "a": "lcmd tab" },
+      "grave_accent_and_tilde": "left_control grave_accent_and_tilde"
+    }
   }
 }

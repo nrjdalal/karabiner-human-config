@@ -133,6 +133,30 @@
             "manipulators": [
               {
                 "type": "basic",
+                "description": "visual studio code fn",
+                "from": {
+                  "key_code": "fn"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'Visual Studio Code'"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.microsoft\\.VSCode$"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
                 "description": "visual studio code fn grave_accent_and_tilde",
                 "from": {
                   "key_code": "grave_accent_and_tilde",
