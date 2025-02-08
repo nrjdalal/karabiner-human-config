@@ -1,5 +1,5 @@
 import { extractFlags, extractTimeout, splitAtFirstMatch } from "@/utils"
-import { customKeys } from "~/constants"
+import { customAliases } from "~/constants"
 
 export const toAfterKeyUp = (
   input:
@@ -12,7 +12,7 @@ export const toAfterKeyUp = (
 
   let [pre, post] = splitAtFirstMatch(input, "$")
 
-  for (const [key, value] of Object.entries(customKeys)) {
+  for (const [key, value] of Object.entries(customAliases)) {
     pre = pre.replace(new RegExp(`\\b${key}\\b`, "g"), value)
   }
 

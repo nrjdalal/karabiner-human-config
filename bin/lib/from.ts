@@ -1,10 +1,10 @@
 import { splitAtFirstMatch } from "@/utils"
-import { customKeys } from "~/constants"
+import { customAliases } from "~/constants"
 
 export const from = (str: string) => {
   let [pre, post] = splitAtFirstMatch(str, "|")
 
-  for (const [key, value] of Object.entries(customKeys)) {
+  for (const [key, value] of Object.entries(customAliases)) {
     pre = pre.replace(new RegExp(`\\b${key}\\b`, "g"), value)
     post = post?.replace(new RegExp(`\\b${key}\\b`, "g"), value)
   }

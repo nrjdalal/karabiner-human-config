@@ -1,2 +1,2 @@
-export * from "./custom-keys"
+export * from "./custom-aliases"
 export * from "./manipulator-keys"

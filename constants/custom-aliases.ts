@@ -1,4 +1,4 @@
-export const customKeys = {
+export const customAliases = {
   cmd: "left_command",
   ctrl: "left_control",
   esc: "escape",
