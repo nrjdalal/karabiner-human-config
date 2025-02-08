@@ -230,9 +230,10 @@ You can then manually copy and paste it into your `karabiner.json` file.
 
 ## Table of Contents
 
-- [Usage](#usage)
-- [Table of Contents](#table-of-contents)
-- [Nested App Configuration](#nested-app-configuration)
+- [Types of Addressing](#types-of-addressing)
+  - [Direct Keys](#direct-keys)
+  - [Group Keys](#group-keys)
+  - [Application Keys](#application-keys)
 - [Advanced Usage for From Events](#advanced-usage-for-from-events)
   - [Optional Modifiers](#optional-modifiers)
 - [Advanced Usage for To Events](#advanced-usage-for-to-events)
@@ -246,22 +247,47 @@ You can then manually copy and paste it into your `karabiner.json` file.
 
 <br/>
 
-## Nested App Configuration
+## Types of Addressing
+
+### Direct Keys
+
+Use `string` values if there's only `to` event. In case of multiple events, use `object` values. Read more at [specifying multiple events](#specify-multiple-events).
 
 ```json
 {
-  // ... system wide configuration
-  "Visual Studio Code": {
-    // ... app specific configuration
-  },
-  "Google Chrome": {
-    // ... app specific configuration
-  }
-  // ... system wide configuration
+  "hyper spacebar": "left_command spacebar",
+  "caps_lock": { "to": "hyper", "alone": "100 caps_lock" }
 }
 ```
 
-Bonus: You can use app names instead of bundle identifiers. Let KHC handle the rest.
+### Group Keys
+
+Instead of repeating the same key beginning, use group keys.
+
+```diff
+{
+-  "fn": { "to": "fn", "alone": "left_command tab" },
+-  "fn spacebar": "left_command spacebar",
+-  "fn v": "$ open -a 'Visual Studio Code'",
++  "fn": {
++    "_self": { "to": "fn", "alone": "left_command tab" },
++    "spacebar": "left_command spacebar",
++    "v": "$ open -a 'Visual Studio Code'"
++  }
+}
+```
+
+### Application Keys
+
+Use application names if you want to specify key mappings for a specific application. Don't worry about finding bundle identifiers, just use the app name.
+
+```json
+{
+  "Visual Studio Code": {
+    "fn grave_accent_and_tilde": "left_control grave_accent_and_tilde"
+  }
+}
+```
 
 <br/>
 
