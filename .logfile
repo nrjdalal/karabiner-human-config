@@ -10,33 +10,6 @@
             "manipulators": [
               {
                 "type": "basic",
-                "description": "hyper spacebar",
-                "from": {
-                  "key_code": "spacebar",
-                  "modifiers": {
-                    "mandatory": [
-                      "left_command",
-                      "left_control",
-                      "left_option",
-                      "left_shift"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "spacebar",
-                    "modifiers": [
-                      "left_command"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "manipulators": [
-              {
-                "type": "basic",
                 "description": "caps_lock",
                 "from": {
                   "key_code": "caps_lock"
@@ -55,6 +28,33 @@
                   {
                     "key_code": "caps_lock",
                     "hold_down_milliseconds": 100
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "hyper spacebar",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_command"
+                    ]
                   }
                 ]
               }
@@ -124,30 +124,6 @@
                 "to": [
                   {
                     "shell_command": "open -a 'Visual Studio Code'"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "manipulators": [
-              {
-                "type": "basic",
-                "description": "visual studio code fn",
-                "from": {
-                  "key_code": "fn"
-                },
-                "to": [
-                  {
-                    "shell_command": "open -a 'Visual Studio Code'"
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "^com\\.microsoft\\.VSCode$"
-                    ]
                   }
                 ]
               }
