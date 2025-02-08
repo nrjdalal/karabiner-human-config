@@ -21,14 +21,13 @@ Just create a new configuration file `karabiner.human.json`:
 
 ```json
 {
-  // hyper key bindings
+  // direct
   "hyper spacebar": "left_command spacebar",
   "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" },
-  // function key bindings
   "fn": { "to": "fn", "to_if_alone": "left_command tab" },
   "fn spacebar": "left_command spacebar",
   "fn v": "$ open -a 'Visual Studio Code'",
-  // visual studio code specific bindings
+  // application group
   "Visual Studio Code": {
     "fn grave_accent_and_tilde": "left_control grave_accent_and_tilde"
   }
@@ -522,5 +521,29 @@ Check out [manipulator-keys.ts](constants/manipulator-keys.ts) for more.
 
 ## Future Considerations
 
-- support for variables, auto configuration rewrite
+- add support for nested group
+
+```diff
+{
+  // direct
+  "hyper spacebar": "left_command spacebar",
+  "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" },
+  // group
+-  "fn": { "to": "fn", "to_if_alone": "left_command tab" },
+-  "fn spacebar": "left_command spacebar",
+-  "fn v": "$ open -a 'Visual Studio Code'",
++  "fn": {
++    "_self": { "to": "fn", "to_if_alone": "left_command tab" },
++    "spacebar": "left_command spacebar",
++    "v": "$ open '/Applications/Visual Studio Code.app'"
++  },
+  // application group
+  "Visual Studio Code": {
+    "fn grave_accent_and_tilde": "left_control grave_accent_and_tilde"
+  }
+}
+```
+
+- support for variables
+- auto configuration rewrite
 - you tell me, I just got to know about Karabiner-Elements 3 days ago

@@ -1,12 +1,14 @@
 {
-  // hyper key
+  // direct
   "hyper spacebar": "left_command spacebar",
   "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" },
-  // function key
-  "fn": { "to": "fn", "to_if_alone": "left_command tab" },
-  "fn spacebar": "left_command spacebar",
-  "fn v": "$ open '/Applications/Visual Studio Code.app'",
-  // my vscode keybindings
+  // group
+  "fn": {
+    "_self": { "to": "fn", "to_if_alone": "left_command tab" },
+    "spacebar": "left_command spacebar",
+    "v": "$ open '/Applications/Visual Studio Code.app'"
+  },
+  // application group
   "Visual Studio Code": {
     "fn grave_accent_and_tilde": "left_control grave_accent_and_tilde"
   }
