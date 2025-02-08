@@ -23,10 +23,13 @@ Just create a new configuration file `karabiner.human.json`:
 {
   // direct
   "hyper spacebar": "left_command spacebar",
-  "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" },
-  "fn": { "to": "fn", "to_if_alone": "left_command tab" },
-  "fn spacebar": "left_command spacebar",
-  "fn v": "$ open -a 'Visual Studio Code'",
+  "caps_lock": { "to": "hyper", "alone": "100 caps_lock" },
+  // group
+  "fn": {
+    "_self": { "to": "fn", "alone": "left_command tab" },
+    "spacebar": "left_command spacebar",
+    "v": "$ open -a 'Visual Studio Code'"
+  },
   // application group
   "Visual Studio Code": {
     "fn grave_accent_and_tilde": "left_control grave_accent_and_tilde"

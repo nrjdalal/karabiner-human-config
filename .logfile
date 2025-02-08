@@ -10,33 +10,6 @@
             "manipulators": [
               {
                 "type": "basic",
-                "description": "caps_lock",
-                "from": {
-                  "key_code": "caps_lock"
-                },
-                "to": [
-                  {
-                    "key_code": "left_shift",
-                    "modifiers": [
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ]
-                  }
-                ],
-                "to_if_alone": [
-                  {
-                    "key_code": "caps_lock",
-                    "hold_down_milliseconds": 100
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "manipulators": [
-              {
-                "type": "basic",
                 "description": "hyper spacebar",
                 "from": {
                   "key_code": "spacebar",
@@ -55,6 +28,33 @@
                     "modifiers": [
                       "left_command"
                     ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "caps_lock",
+                "from": {
+                  "key_code": "caps_lock"
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "caps_lock",
+                    "hold_down_milliseconds": 100
                   }
                 ]
               }

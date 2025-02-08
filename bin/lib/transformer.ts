@@ -26,6 +26,7 @@ export const rules = async ({
   for (let [key, value] of Object.entries(config)) {
     if (typeof value === "string") value = { to: value }
 
+    // ~ flatten application group
     if (startsWithCapital(key)) {
       const appConfig = await rules({
         app: key.toLowerCase(),
@@ -36,6 +37,7 @@ export const rules = async ({
       continue
     }
 
+    // ~ flatten group
     if (value.hasOwnProperty("_self")) {
       const _self = {
         [key]: value._self,
@@ -44,7 +46,7 @@ export const rules = async ({
       const rest = Object.fromEntries(
         Object.entries(value).map(([k, v]) => [`${key} ${k}`, v]),
       )
-      result.push({ ..._self, ...rest })
+      result.push(...(await rules({ config: { ..._self, ...rest } })))
       continue
     }
 
