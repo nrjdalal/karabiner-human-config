@@ -11,7 +11,7 @@ Just create a new configuration file `karabiner.human.json`:
 - Don't hold back on the comments.
 - Use [custom aliases](#custom-aliases) like `hyper` `lcmd` etc.
 - Use app names and stop worrying about finding bundle identifiers.
-- Use `t`, `a`, `h` for to, to_if_alone, and to_if_held_down and [more](#manipulator-keys-aliases).
+- Use `t` `a` `h` for to, to_if_alone etc and [more](#manipulator-keys-aliases).
 
 ```json
 {
