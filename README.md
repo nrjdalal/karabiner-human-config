@@ -8,7 +8,7 @@ Creating configuration files for [Karabiner-Elements](https://github.com/pqrs-or
 
 Just create a new configuration file `karabiner.human.json`:
 
-- Feel free to use comments. And custom keys like `hyper`, etc.
+- Feel free to use comments. And [custom aliases](#custom-aliases) like `hyper`, etc.
 
 ```json
 {
@@ -417,18 +417,13 @@ Use object insetad of string `{ to: ..., to_if_alone: ... }` to specify multiple
 
 <br/>
 
+## Custom Aliases
+
+- hyper: `left_command left_control left_option left_shift`
+- left_command: `lcmd` `l_cmd` `left_cmd`
+
+And many more. Check out [custom-keys.ts](constants/custom-keys.ts) for more. Feel free to add PRs for more aliases.
+
 ## Future Considerations
 
 - support for variables
-- app specific configurations
-
-```json
-{
-  "fn spacebar": "left_command spacebar",
-  "Google Chrome": {
-    "fn spacebar": "..."
-  }
-}
-```
-
-<!-- alone held after delayed  -->
