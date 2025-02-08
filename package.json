@@ -1,6 +1,6 @@
 {
   "name": "karabiner-human-config",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A human-readable configuration generator for Karabiner-Elements",
   "keywords": [
     "elements",

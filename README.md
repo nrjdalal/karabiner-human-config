@@ -4,6 +4,8 @@
 
 Creating configuration files for [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) can be challenging. With Karabiner-Human-Config (KHC), you can effortlessly generate your own configuration files using human-readable/understandable syntax.
 
+<br/>
+
 ## Usage
 
 Just create a new configuration file `karabiner.human.json`:
@@ -218,7 +220,7 @@ And voila! From 10 lines to 170+ lines of configuration in just a few seconds.
 The generated configuration, will be logged to the console.
 You can then manually copy and paste it into your `karabiner.json` file.
 
-- Auto write and specifing path is coming soon.
+<br/>
 
 ## Table of Contents
 
@@ -512,5 +514,5 @@ Check out [manipulator-keys.ts](constants/manipulator-keys.ts) for more.
 
 ## Future Considerations
 
-- support for variables
+- support for variables, auto configuration rewrite
 - you tell me, I just got to know about Karabiner-Elements 3 days ago
