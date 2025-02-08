@@ -17,18 +17,18 @@ Just create a new configuration file `karabiner.human.json`:
 - Don't hold back on the comments.
 - Use [custom aliases](#custom-aliases) like `lcmd` `hyper` etc.
 - Specify flags and delays easily, if needed.
-- Use `t` `a` `h` etc as [manipulator key's aliases](#manipulator-keys-aliases).
+- Use `t` `a` etc as [manipulator key's aliases](#manipulator-keys-aliases).
 - Use `$` for shell commands.
 - Don't worry about finding bundle identifiers, just use the app name.
 
 ```json
 {
   // direct
-  "hyper spacebar": "lcmd spacebar", // to event with lcmd alias for left_command
+  "hyper spacebar": "lcmd spacebar", // hyper & lcmd are custom aliases
   "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" }, // 100ms delay
   // group
   "fn": {
-    "_self": { "t": "fn", "a": "lcmd tab" }, // manipulator key's aliases
+    "_self": { "t": "fn", "a": "lcmd tab" }, // t & a are manipulator key's aliases
     "spacebar": "lcmd spacebar",
     "v": "$ open -a 'Visual Studio Code'" // $ for shell command
   },
