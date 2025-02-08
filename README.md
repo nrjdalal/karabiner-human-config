@@ -533,6 +533,8 @@ Instead of strings, use objects like `{ to: ..., to_if_alone: ... }` to specify 
 
 ## Alias
 
+- [key_codes by Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements/blob/main/src/apps/SettingsWindow/Resources/simple_modifications.json)
+
 ### Custom Aliases
 
 - `hyper` for `left_command left_control left_option left_shift`
