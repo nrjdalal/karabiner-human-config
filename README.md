@@ -505,8 +505,8 @@ Instead of strings, use objects like `{ to: ..., to_if_alone: ... }` to specify 
 
 ### Custom Aliases
 
-- hyper: `left_command left_control left_option left_shift`
-- left_command: `lcmd` `l_cmd` `left_cmd`
+- `hyper` for `left_command left_control left_option left_shift`
+- `left_command` for `lcmd` `l_cmd` `left_cmd`
 
 Check out [custom-aliases.ts](constants/custom-aliases.ts) for more.
 
@@ -517,6 +517,8 @@ Check out [custom-aliases.ts](constants/custom-aliases.ts) for more.
 - `h` for `to_if_held_down`
 
 Check out [manipulator-keys.ts](constants/manipulator-keys.ts) for more.
+
+<br/>
 
 ## Future Considerations
 
