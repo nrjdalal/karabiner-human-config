@@ -14,8 +14,8 @@ Usage:
   $ ${name} [options]
 
 Options:
-  -i, --input    Input file
-  -o, --output   Output file
+  -i, --input    Input file path
+                 Default: Current directory
   -v, --version  Display version number
   -h, --help     Display help message
 

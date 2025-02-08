@@ -14,7 +14,6 @@ export const toAfterKeyUp = (
 
   for (const [key, value] of Object.entries(customKeys)) {
     pre = pre.replace(new RegExp(`\\b${key}\\b`, "g"), value)
-    post = post?.replace(new RegExp(`\\b${key}\\b`, "g"), value)
   }
 
   const [rest, flags] = extractFlags(pre)
