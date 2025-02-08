@@ -15,20 +15,21 @@ Creating configuration files for [Karabiner-Elements](https://github.com/pqrs-or
 Just create a new configuration file `karabiner.human.json`:
 
 - Don't hold back on the comments.
-- Use [custom aliases](#custom-aliases) like `hyper` `lcmd` etc.
-- Use app names and stop worrying about finding bundle identifiers.
-- Use `t` `a` `h` for to, to_if_alone etc and [more](#manipulator-keys-aliases).
+- Use [custom aliases](#custom-aliases) like `lcmd` `hyper` etc.
+- Use `t` `a` `h` etc as [manipulator key's aliases](#manipulator-keys-aliases).
+- Use `$` for shell commands.
+- Don't worry about finding bundle identifiers, just use the app name.
 
 ```json
 {
   // direct
-  "hyper spacebar": "left_command spacebar",
-  "caps_lock": { "to": "hyper", "alone": "100 caps_lock" },
+  "hyper spacebar": "lcmd spacebar", // to event with lcmd alias for left_command
+  "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" },
   // group
   "fn": {
-    "_self": { "to": "fn", "alone": "left_command tab" },
-    "spacebar": "left_command spacebar",
-    "v": "$ open -a 'Visual Studio Code'"
+    "_self": { "t": "fn", "a": "lcmd tab" }, // manipulator key's aliases
+    "spacebar": "lcmd spacebar",
+    "v": "$ open -a 'Visual Studio Code'" // $ for shell command
   },
   // application group
   "Visual Studio Code": {
