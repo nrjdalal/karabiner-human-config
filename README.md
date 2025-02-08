@@ -1,6 +1,6 @@
 # Karabiner-Human-Config
 
-## The easiest way to create Karabiner-Elements configuration files, ever!
+## The easiest way to write Karabiner-Elements configuration files, ever!
 
 [![npm](https://img.shields.io/npm/v/karabiner-human-config?color=red&logo=npm)](https://www.npmjs.com/package/karabiner-human-config)
 [![npm](https://img.shields.io/npm/dt/karabiner-human-config?color=red&logo=npm)](https://www.npmjs.com/package/karabiner-human-config)
