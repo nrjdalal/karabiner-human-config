@@ -6,6 +6,8 @@
 [![npm](https://img.shields.io/npm/dt/karabiner-human-config?color=red&logo=npm)](https://www.npmjs.com/package/karabiner-human-config)
 [![GitHub](https://img.shields.io/github/stars/nrjdalal/karabiner-human-config?color=blue)](https://github.com/nrjdalal/karabiner-human-config)
 
+Find it on the official website of Karabiner-Elements at [external JSON generators](https://karabiner-elements.pqrs.org/docs/json/external-json-generators).
+
 Creating configuration files for [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) can be challenging. With Karabiner-Human-Config (KHC), you can effortlessly generate your own configuration files using human-readable/understandable syntax.
 
 <br/>
@@ -14,12 +16,12 @@ Creating configuration files for [Karabiner-Elements](https://github.com/pqrs-or
 
 Just create a new configuration file `karabiner.human.json`:
 
-- Don't hold back on the comments.
+- Don't hold back on the [comments](#comments).
 - Use [custom aliases](#custom-aliases) like `lcmd` `hyper` etc.
-- Specify flags and delays easily, if needed.
+- Specify [flags and delays](#specify-delay-and-flags) easily, if needed.
 - Use `t` `a` etc as [manipulator key's aliases](#manipulator-keys-aliases).
-- Use `$` for shell commands.
-- Don't worry about finding bundle identifiers, just use the app name.
+- Use `$` for [shell commands](#shell-commands).
+- Don't worry about finding bundle identifiers, just use the [app name](#application-keys).
 
 ```json
 {
@@ -45,7 +47,7 @@ And run the following command:
 npx karabiner-human-config
 ```
 
-And voila! From 10 lines to 170+ lines of configuration in just a few seconds.
+And voila! From 10-15 lines to 170+ lines of configuration in just a few seconds.
 
 <details><summary>Generated: karabiner.json</summary><br/><pre>
 {
@@ -233,6 +235,7 @@ You can then manually copy and paste it into your `karabiner.json` file.
 ## Table of Contents
 
 - [Types of Addressing](#types-of-addressing)
+  - [Comments](#comments)
   - [Direct Keys](#direct-keys)
   - [Group Keys](#group-keys)
   - [Application Keys](#application-keys)
@@ -250,6 +253,10 @@ You can then manually copy and paste it into your `karabiner.json` file.
 <br/>
 
 ## Types of Addressing
+
+### Comments
+
+Don't hold back on the comments. They are your best friend. KHC will strip them out before generating the configuration.
 
 ### Direct Keys
 
@@ -278,6 +285,8 @@ Instead of repeating the same key beginning, use group keys.
 +  }
 }
 ```
+
+Note: Currently, `_self` is required to create a group key.
 
 ### Application Keys
 
@@ -413,9 +422,7 @@ Use `$` to specify a shell command.
 
 ### Specify Delay and Flags
 
-Use `lazy`, `repeat`, `halt` to set flags. Or `number` to specify a delay.
-
-> Use only what you need. If you don't need a delay or any flags, don't specify them.
+Prefix with `lazy`, `repeat`, `halt` to set flags. Or `number` to specify a delay.
 
 ```diff
 {
