@@ -3,7 +3,7 @@ import fs from "node:fs"
 import os from "node:os"
 import path from "node:path"
 import { parseArgs } from "node:util"
-import { group } from "@/utils/group"
+import { rules } from "@/lib/transformer"
 import { author, name, version } from "~/package.json"
 import stripJsonComments from "strip-json-comments"
 
@@ -73,68 +73,21 @@ const main = async () => {
         stripJsonComments(fs.readFileSync(config.input, "utf-8")),
       )
 
-      const rules = []
-
-      for (let [key, value] of Object.entries(userConfig)) {
-        const from = group(key)
-        if (typeof from === "object" && from !== null && "modifiers" in from) {
-          delete from.modifiers
-        }
-        if (
-          typeof from === "object" &&
-          from !== null &&
-          from.hasOwnProperty("from_modifiers")
-        ) {
-          if (typeof from !== "string") {
-            from.modifiers = from.from_modifiers
-          }
-          delete from.from_modifiers
-        }
-        let to =
-          typeof value === "string"
-            ? [{ to: group(value) }]
-            : Object.keys(value as object).map((key) => {
-                return { [key]: group((value as Record<string, string>)[key]) }
-              })
-
-        const output: { [key: string]: any } = {}
-
-        to.forEach((item) => {
-          const key = Object.keys(item)[0]
-          const value = item[key]
-          if (value && typeof value === "object" && "from_modifiers" in value) {
-            delete value.from_modifiers
-          }
-          output[key] = [value]
-        })
-
-        rules.push({
-          manipulators: [
-            {
-              type: "basic",
-              description:
-                typeof from !== "string" && from.modifiers
-                  ? typeof from.modifiers === "object" &&
-                    "mandatory" in from.modifiers
-                    ? from.modifiers.mandatory?.join(" ") + " " + from.key_code
-                    : "nrjdalal"
-                  : typeof from === "object" && from !== null
-                    ? from.key_code
-                    : "nrjdalal",
-              from,
-              ...output,
-            },
-          ],
-        })
-      }
-
       const finalConfig = {
         global: {
           show_in_menu_bar: false,
         },
         profiles: [
           {
-            complex_modifications: { rules },
+            complex_modifications: {
+              rules: (
+                await rules({
+                  config: userConfig,
+                })
+              ).map((rule) => ({
+                manipulators: [rule],
+              })),
+            },
             name: "nrjdalal",
             selected: true,
             virtual_hid_keyboard: {

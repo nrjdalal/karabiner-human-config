@@ -1,0 +1,131 @@
+[
+  {
+    "type": "basic",
+    "description": "fn",
+    "from": {
+      "any": "fn"
+    },
+    "to": [
+      {
+        "any": "fn"
+      }
+    ],
+    "to_if_alone": [
+      {
+        "any": "tab",
+        "modifiers": [
+          "left_command"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "basic",
+    "description": "fn spacebar | test",
+    "from": {
+      "any": "spacebar",
+      "modifiers": {
+        "mandatory": [
+          "fn"
+        ],
+        "optional": [
+          "test"
+        ]
+      }
+    },
+    "to": [
+      {
+        "any": "spacebar",
+        "modifiers": [
+          "left_command"
+        ],
+        "lazy": true
+      }
+    ]
+  },
+  {
+    "type": "basic",
+    "description": "fn v",
+    "from": {
+      "any": "v",
+      "modifiers": {
+        "mandatory": [
+          "fn"
+        ]
+      }
+    },
+    "to": [
+      {
+        "shell_command": "open '/Applications/Visual Studio Code.app'",
+        "halt": true
+      }
+    ]
+  },
+  {
+    "type": "basic",
+    "description": "hyper | spacebar",
+    "from": {
+      "any": "hyper",
+      "modifiers": {
+        "optional": [
+          "spacebar"
+        ]
+      }
+    },
+    "to": [
+      {
+        "any": "spacebar",
+        "modifiers": [
+          "left_command"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "basic",
+    "description": "caps_lock",
+    "from": {
+      "any": "caps_lock"
+    },
+    "to": [
+      {
+        "any": "hyper",
+        "hold_down_milliseconds": 100
+      }
+    ],
+    "to_if_alone": [
+      {
+        "any": "caps_lock",
+        "hold_down_milliseconds": 100
+      }
+    ]
+  },
+  {
+    "type": "basic",
+    "description": "visual studio code fn",
+    "from": {
+      "any": "fn"
+    },
+    "to": [
+      {
+        "any": "fn"
+      }
+    ],
+    "to_if_alone": [
+      {
+        "any": "tab",
+        "modifiers": [
+          "left_command"
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "type": "frontmost_application_if",
+        "bundle_identifiers": [
+          "^com\\.microsoft\\.VSCode$"
+        ]
+      }
+    ]
+  }
+]

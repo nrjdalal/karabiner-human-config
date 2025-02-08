@@ -54,6 +54,7 @@
     "package.json": "sort-package-json"
   },
   "dependencies": {
+    "bundle-id": "^3.0.0",
     "strip-json-comments": "^5.0.1"
   },
   "devDependencies": {
@@ -62,6 +63,7 @@
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
+    "@types/bundle-id": "^3.0.0",
     "@types/node": "^22.10.1",
     "lint-staged": "^15.2.10",
     "prettier": "^3.4.2",
