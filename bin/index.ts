@@ -38,6 +38,8 @@ const main = async () => {
         output: { type: "string", short: "o", default: "auto" },
         help: { type: "boolean", short: "h" },
         version: { type: "boolean", short: "v" },
+        // for development purposes
+        logfile: { type: "boolean" },
       },
     })
 
@@ -95,6 +97,14 @@ const main = async () => {
             },
           },
         ],
+      }
+
+      if (values.logfile) {
+        fs.writeFileSync(
+          path.resolve(process.cwd() + "/.logfile"),
+          JSON.stringify(finalConfig, null, 2),
+        )
+        process.exit(0)
       }
 
       console.log(JSON.stringify(finalConfig, null, 2))

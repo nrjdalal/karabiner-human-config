@@ -1,7 +1,7 @@
 {
   // direct
-  "hyper spacebar": "left_command spacebar",
   "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" },
+  "hyper spacebar": "left_command spacebar",
   // group
   "fn": {
     "_self": { "to": "fn", "to_if_alone": "left_command tab" },

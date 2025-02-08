@@ -1,131 +1,116 @@
-[
-  {
-    "type": "basic",
-    "description": "fn",
-    "from": {
-      "any": "fn"
-    },
-    "to": [
-      {
-        "any": "fn"
-      }
-    ],
-    "to_if_alone": [
-      {
-        "any": "tab",
-        "modifiers": [
-          "left_command"
-        ]
-      }
-    ]
+{
+  "global": {
+    "show_in_menu_bar": false
   },
-  {
-    "type": "basic",
-    "description": "fn spacebar | test",
-    "from": {
-      "any": "spacebar",
-      "modifiers": {
-        "mandatory": [
-          "fn"
-        ],
-        "optional": [
-          "test"
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "caps_lock",
+                "from": {
+                  "key_code": "caps_lock"
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "caps_lock",
+                    "hold_down_milliseconds": 100
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "hyper spacebar",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "fn": {
+                  "to": "fn",
+                  "to_if_alone": "left_command tab"
+                },
+                "fn spacebar": "left_command spacebar",
+                "fn v": "$ open '/Applications/Visual Studio Code.app'"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "visual studio code fn grave_accent_and_tilde",
+                "from": {
+                  "key_code": "grave_accent_and_tilde",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.microsoft\\.VSCode$"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         ]
+      },
+      "name": "nrjdalal",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
       }
-    },
-    "to": [
-      {
-        "any": "spacebar",
-        "modifiers": [
-          "left_command"
-        ],
-        "lazy": true
-      }
-    ]
-  },
-  {
-    "type": "basic",
-    "description": "fn v",
-    "from": {
-      "any": "v",
-      "modifiers": {
-        "mandatory": [
-          "fn"
-        ]
-      }
-    },
-    "to": [
-      {
-        "shell_command": "open '/Applications/Visual Studio Code.app'",
-        "halt": true
-      }
-    ]
-  },
-  {
-    "type": "basic",
-    "description": "hyper | spacebar",
-    "from": {
-      "any": "hyper",
-      "modifiers": {
-        "optional": [
-          "spacebar"
-        ]
-      }
-    },
-    "to": [
-      {
-        "any": "spacebar",
-        "modifiers": [
-          "left_command"
-        ]
-      }
-    ]
-  },
-  {
-    "type": "basic",
-    "description": "caps_lock",
-    "from": {
-      "any": "caps_lock"
-    },
-    "to": [
-      {
-        "any": "hyper",
-        "hold_down_milliseconds": 100
-      }
-    ],
-    "to_if_alone": [
-      {
-        "any": "caps_lock",
-        "hold_down_milliseconds": 100
-      }
-    ]
-  },
-  {
-    "type": "basic",
-    "description": "visual studio code fn",
-    "from": {
-      "any": "fn"
-    },
-    "to": [
-      {
-        "any": "fn"
-      }
-    ],
-    "to_if_alone": [
-      {
-        "any": "tab",
-        "modifiers": [
-          "left_command"
-        ]
-      }
-    ],
-    "conditions": [
-      {
-        "type": "frontmost_application_if",
-        "bundle_identifiers": [
-          "^com\\.microsoft\\.VSCode$"
-        ]
-      }
-    ]
-  }
-]
+    }
+  ]
+}

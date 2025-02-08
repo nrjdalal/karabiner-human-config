@@ -36,6 +36,18 @@ export const rules = async ({
       continue
     }
 
+    if (value.hasOwnProperty("_self")) {
+      const _self = {
+        [key]: value._self,
+      }
+      delete value._self
+      const rest = Object.fromEntries(
+        Object.entries(value).map(([k, v]) => [`${key} ${k}`, v]),
+      )
+      result.push({ ..._self, ...rest })
+      continue
+    }
+
     value = renameKeys(value, manipulatorKeys)
 
     const object = {
