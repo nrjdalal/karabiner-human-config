@@ -310,8 +310,8 @@ Use `|` to specify optional modifiers.
 
 ```diff
 {
--  "fn spacebar: "left_command spacebar"
-+  "fn spacebar | any": "left_command spacebar"
+-  "fn spacebar: "cmd spacebar"
++  "fn spacebar | any": "cmd spacebar"
 }
 ```
 
@@ -328,7 +328,7 @@ Use `|` to specify optional modifiers.
             "manipulators": [
               {
                 "type": "basic",
-                "description": "fn spacebar",
+                "description": "fn spacebar | any",
                 "from": {
                   "key_code": "spacebar",
                   "modifiers": {
@@ -373,7 +373,7 @@ Use `$` to specify a shell command.
 
 ```diff
 {
--  "fn spacebar": "left_command spacebar"
+-  "fn spacebar": "cmd spacebar"
 +  "fn spacebar": "$ open -a 'Google Chrome'"
 }
 ```
@@ -426,8 +426,8 @@ Prefix with `lazy`, `repeat`, `halt` to set flags. Or `number` to specify a dela
 
 ```diff
 {
--  "fn spacebar": "left_command spacebar"
-+  "fn spacebar": "100 lazy repeat halt left_command spacebar"
+-  "fn spacebar": "cmd spacebar"
++  "fn spacebar": "100 lazy repeat halt cmd spacebar"
 }
 ```
 
@@ -486,8 +486,8 @@ Instead of strings, use objects like `{ to: ..., to_if_alone: ... }` to specify 
 
 ```diff
 {
--  "fn spacebar": "left_command spacebar"
-+  "fn": { "to": "fn", "to_if_alone": "left_command tab" }
+-  "fn spacebar": "cmd spacebar"
++  "fn": { "to": "fn", "to_if_alone": "cmd tab" }
 }
 ```
 
