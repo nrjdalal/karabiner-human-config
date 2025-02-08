@@ -1,3 +1,21 @@
+const extractFlags = (str: string) => {
+  const flags = ["lazy", "repeat", "halt"]
+  str = str.replace(/\s+/g, " ")
+  const parts = str.split(" ")
+  const flagsObj = parts.reduce(
+    (acc, part) => {
+      if (flags.includes(part)) {
+        acc[part] = true
+        return acc
+      }
+      return acc
+    },
+    {} as { [key: string]: boolean },
+  )
+  const cleanStr = parts.filter((part) => !flags.includes(part))
+  return [cleanStr, flagsObj] as [string[], { [key: string]: boolean } | {}]
+}
+
 const regexifyBundleId = (str: string) => `^${str.replace(/\./g, "\\.")}$`
 
 const renameKeys = (
@@ -34,6 +52,7 @@ const transformObjectKey = <T, U>(
 }
 
 export {
+  extractFlags,
   regexifyBundleId,
   renameKeys,
   splitAtFirstMatch,

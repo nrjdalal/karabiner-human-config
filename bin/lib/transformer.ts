@@ -10,11 +10,14 @@ import { manipulatorKeys } from "~/constants"
 import { bundleId as bid } from "bundle-id"
 import { from } from "./from"
 import { to } from "./to"
+import { toAfterKeyUp } from "./to-after-key-up"
+import { toIfAlone } from "./to-if-alone"
+import { toIfHeldDown } from "./to-if-held-down"
 
 const test = {
   fn: { t: "fn", a: "left_command tab" },
-  "fn spacebar | test": "left_command spacebar",
-  "fn v": "$ open '/Applications/Visual Studio Code.app'",
+  "fn spacebar | test": "lazy left_command spacebar",
+  "fn v": "halt $ open '/Applications/Visual Studio Code.app'",
   "hyper | spacebar": "left_command spacebar",
   caps_lock: { t: "hyper", a: "100 caps_lock" },
   "Visual Studio Code": {
@@ -64,6 +67,9 @@ export const transformConfig = async ({
     }
 
     transformObjectKey(object, "from", from)
+    transformObjectKey(object, "to_after_key_up", toAfterKeyUp)
+    transformObjectKey(object, "to_if_alone", toIfAlone)
+    transformObjectKey(object, "to_if_held_down", toIfHeldDown)
     transformObjectKey(object, "to", to)
 
     result.push(object)

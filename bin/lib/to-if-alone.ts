@@ -1,6 +1,6 @@
 import { extractFlags, splitAtFirstMatch } from "@/utils"
 
-export const to = (
+export const toIfAlone = (
   input:
     | string
     | {
