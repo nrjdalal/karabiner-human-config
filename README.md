@@ -221,7 +221,7 @@ And voila! From 10 lines to 170+ lines of configuration in just a few seconds.
 
 <br/>
 
-The generated configuration, will be logged to the console.
+The generated configuration will be logged to the console.
 You can then manually copy and paste it into your `karabiner.json` file.
 
 <br/>
@@ -230,31 +230,32 @@ You can then manually copy and paste it into your `karabiner.json` file.
 
 - [Usage](#usage)
 - [Table of Contents](#table-of-contents)
-- [App Names for Specific Bindings](#app-names-for-specific-bindings)
+- [Nested App Configuration](#nested-app-configuration)
 - [Advanced Usage for From Events](#advanced-usage-for-from-events)
   - [Optional Modifiers](#optional-modifiers)
 - [Advanced Usage for To Events](#advanced-usage-for-to-events)
   - [Shell Commands](#shell-commands)
   - [Specify Delay and Flags](#specify-delay-and-flags)
   - [Specify Multiple Events](#specify-multiple-events)
-- [Custom Aliases](#custom-aliases)
-- [Manipulator Key's Aliases](#manipulator-keys-aliases)
+- [Alias](#alias)
+  - [Custom Aliases](#custom-aliases)
+  - [Manipulator Key's Aliases](#manipulator-keys-aliases)
 - [Future Considerations](#future-considerations)
 
 <br/>
 
-## App Names for Specific Bindings
+## Nested App Configuration
 
 ```json
 {
-  // ... rest of configuration
+  // ... system wide configuration
   "Visual Studio Code": {
     // ... app specific configuration
   },
   "Google Chrome": {
     // ... app specific configuration
   }
-  // ... rest of configuration
+  // ... system wide configuration
 }
 ```
 
@@ -444,7 +445,7 @@ Use `lazy`, `repeat`, `halt` to set flags. Or `number` to specify a delay.
 
 ### Specify Multiple Events
 
-Use object insetad of string `{ to: ..., to_if_alone: ... }` to specify multiple to events.
+Instead of strings, use objects like `{ to: ..., to_if_alone: ... }` to specify multiple to events.
 
 ```diff
 {
@@ -500,14 +501,16 @@ Use object insetad of string `{ to: ..., to_if_alone: ... }` to specify multiple
 
 <br/>
 
-## Custom Aliases
+## Alias
+
+### Custom Aliases
 
 - hyper: `left_command left_control left_option left_shift`
 - left_command: `lcmd` `l_cmd` `left_cmd`
 
 Check out [custom-aliases.ts](constants/custom-aliases.ts) for more.
 
-## Manipulator Key's Aliases
+### Manipulator Key's Aliases
 
 - `t` for `to`
 - `a` for `to_if_alone`
