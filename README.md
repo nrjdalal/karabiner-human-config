@@ -242,7 +242,7 @@ You can then manually copy and paste it into your `karabiner.json` file.
 - [Advanced Usage for From Events](#advanced-usage-for-from-events)
   - [Optional Modifiers](#optional-modifiers)
 - [Advanced Usage for To Events](#advanced-usage-for-to-events)
-  - [Shell Commands](#shell-commands)
+  - [Shell Command](#shell-command)
   - [Prefix Delay and Flags](#prefix-delay-and-flags)
   - [Specify Multiple Events](#specify-multiple-events)
 - [Alias](#alias)
