@@ -1,15 +1,15 @@
 {
   // direct
-  "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" },
-  "hyper spacebar": "lcmd spacebar",
+  "caps": { "t": "hyper", "a": "100 caps" },
+  "hyper spacebar": "cmd spacebar",
   // group
   "fn": {
-    "_self": { "t": "fn", "a": "lcmd tab" },
-    "spacebar": "lcmd spacebar",
+    "_self": { "t": "fn", "a": "cmd tab" },
+    "spacebar": "cmd spacebar",
     "v": "$ open -a 'Visual Studio Code'"
   },
   // application group
   "Visual Studio Code": {
-    "fn grave_accent_and_tilde": "left_control grave_accent_and_tilde"
+    "fn tilde": "ctrl tilde"
   }
 }

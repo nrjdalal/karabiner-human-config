@@ -17,26 +17,26 @@ Creating configuration files for [Karabiner-Elements](https://github.com/pqrs-or
 Just create a new configuration file `karabiner.human.json`:
 
 - Don't hold back on the [comments](#comments).
-- Use [custom aliases](#custom-aliases) like `lcmd` `hyper` etc.
-- Specify [flags and delays](#specify-delay-and-flags) easily, if needed.
+- Use [custom aliases](#custom-aliases) like `caps` `hyper` `cmd` `ctrl` etc.
 - Use `t` `a` etc as [manipulator key's aliases](#manipulator-keys-aliases).
-- Use `$` for [shell commands](#shell-commands).
-- Don't worry about finding bundle identifiers, just use the [app name](#application-keys).
+- Prefix [flags and delays](#prefix-delay-and-flags) like `100` easily, if needed.
+- Use `$` for [shell command](#shell-command).
+- Don't worry about finding bundle identifiers, just use the [app's name](#application-group-keys) like `Visual Studio Code`.
 
 ```json
 {
   // direct
-  "hyper spacebar": "lcmd spacebar", // hyper & lcmd are custom aliases
-  "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" }, // 100ms delay
+  "caps": { "t": "hyper", "a": "100 caps" },
+  "hyper spacebar": "cmd spacebar",
   // group
   "fn": {
-    "_self": { "t": "fn", "a": "lcmd tab" }, // t & a are manipulator key's aliases
-    "spacebar": "lcmd spacebar",
-    "v": "$ open -a 'Visual Studio Code'" // $ for shell command
+    "_self": { "t": "fn", "a": "cmd tab" },
+    "spacebar": "cmd spacebar",
+    "v": "$ open -a 'Visual Studio Code'"
   },
   // application group
   "Visual Studio Code": {
-    "fn grave_accent_and_tilde": "left_control grave_accent_and_tilde"
+    "fn tilde": "ctrl tilde"
   }
 }
 ```
@@ -62,6 +62,33 @@ And voila! From 10-15 lines to 170+ lines of configuration in just a few seconds
             "manipulators": [
               {
                 "type": "basic",
+                "description": "caps",
+                "from": {
+                  "key_code": "caps_lock"
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "caps_lock",
+                    "hold_down_milliseconds": 100
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
                 "description": "hyper spacebar",
                 "from": {
                   "key_code": "spacebar",
@@ -80,33 +107,6 @@ And voila! From 10-15 lines to 170+ lines of configuration in just a few seconds
                     "modifiers": [
                       "left_command"
                     ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "manipulators": [
-              {
-                "type": "basic",
-                "description": "caps_lock",
-                "from": {
-                  "key_code": "caps_lock"
-                },
-                "to": [
-                  {
-                    "key_code": "left_shift",
-                    "modifiers": [
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ]
-                  }
-                ],
-                "to_if_alone": [
-                  {
-                    "key_code": "caps_lock",
-                    "hold_down_milliseconds": 100
                   }
                 ]
               }
@@ -185,7 +185,7 @@ And voila! From 10-15 lines to 170+ lines of configuration in just a few seconds
             "manipulators": [
               {
                 "type": "basic",
-                "description": "visual studio code fn grave_accent_and_tilde",
+                "description": "visual studio code fn tilde",
                 "from": {
                   "key_code": "grave_accent_and_tilde",
                   "modifiers": {
@@ -238,12 +238,12 @@ You can then manually copy and paste it into your `karabiner.json` file.
   - [Comments](#comments)
   - [Direct Keys](#direct-keys)
   - [Group Keys](#group-keys)
-  - [Application Keys](#application-keys)
+  - [Application Group Keys](#application-group-keys)
 - [Advanced Usage for From Events](#advanced-usage-for-from-events)
   - [Optional Modifiers](#optional-modifiers)
 - [Advanced Usage for To Events](#advanced-usage-for-to-events)
   - [Shell Commands](#shell-commands)
-  - [Specify Delay and Flags](#specify-delay-and-flags)
+  - [Prefix Delay and Flags](#prefix-delay-and-flags)
   - [Specify Multiple Events](#specify-multiple-events)
 - [Alias](#alias)
   - [Custom Aliases](#custom-aliases)
@@ -264,8 +264,8 @@ Use `string` values if there's only `to` event. In case of multiple events, use 
 
 ```json
 {
-  "hyper spacebar": "left_command spacebar",
-  "caps_lock": { "to": "hyper", "alone": "100 caps_lock" }
+  "hyper spacebar": "cmd spacebar",
+  "caps": { "t": "hyper", "a": "100 caps" }
 }
 ```
 
@@ -275,12 +275,12 @@ Instead of repeating the same key beginning, use group keys.
 
 ```diff
 {
--  "fn": { "to": "fn", "alone": "left_command tab" },
--  "fn spacebar": "left_command spacebar",
+-  "fn": { "t": "fn", "a": "cmd tab" },
+-  "fn spacebar": "cmd spacebar",
 -  "fn v": "$ open -a 'Visual Studio Code'",
 +  "fn": {
-+    "_self": { "to": "fn", "alone": "left_command tab" },
-+    "spacebar": "left_command spacebar",
++    "_self": { "t": "fn", "a": "cmd tab" },
++    "spacebar": "cmd spacebar",
 +    "v": "$ open -a 'Visual Studio Code'"
 +  }
 }
@@ -288,14 +288,14 @@ Instead of repeating the same key beginning, use group keys.
 
 Note: Currently, `_self` is required to create a group key.
 
-### Application Keys
+### Application Group Keys
 
 Use application names if you want to specify key mappings for a specific application. Don't worry about finding bundle identifiers, just use the app name.
 
 ```json
 {
   "Visual Studio Code": {
-    "fn grave_accent_and_tilde": "left_control grave_accent_and_tilde"
+    "fn tilde": "ctrl tilde"
   }
 }
 ```
@@ -367,7 +367,7 @@ Use `|` to specify optional modifiers.
 
 ## Advanced Usage for To Events
 
-### Shell Commands
+### Shell Command
 
 Use `$` to specify a shell command.
 
@@ -420,7 +420,7 @@ Use `$` to specify a shell command.
 }
 </pre></details>
 
-### Specify Delay and Flags
+### Prefix Delay and Flags
 
 Prefix with `lazy`, `repeat`, `halt` to set flags. Or `number` to specify a delay.
 

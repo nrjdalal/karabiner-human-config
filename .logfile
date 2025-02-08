@@ -10,7 +10,7 @@
             "manipulators": [
               {
                 "type": "basic",
-                "description": "caps_lock",
+                "description": "caps",
                 "from": {
                   "key_code": "caps_lock"
                 },
@@ -133,7 +133,7 @@
             "manipulators": [
               {
                 "type": "basic",
-                "description": "visual studio code fn grave_accent_and_tilde",
+                "description": "visual studio code fn tilde",
                 "from": {
                   "key_code": "grave_accent_and_tilde",
                   "modifiers": {

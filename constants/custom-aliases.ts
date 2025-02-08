@@ -1,4 +1,8 @@
 export const customAliases = {
+  // caps_lock
+  caps: "caps_lock",
+  capslock: "caps_lock",
+
   // command
   cmd: "left_command",
   command: "left_command",
