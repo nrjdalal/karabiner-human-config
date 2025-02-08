@@ -1,30 +1,61 @@
 export const customAliases = {
+  // command
   cmd: "left_command",
-  ctrl: "left_control",
-  esc: "escape",
-  hyper: "left_command left_control left_option left_shift",
+  command: "left_command",
   l_cmd: "left_command",
-  l_ctrl: "left_control",
-  l_opt: "left_option",
-  l_shift: "left_shift",
+  l_command: "left_command",
   lcmd: "left_command",
-  lctrl: "left_control",
+  lcommand: "left_command",
   left_cmd: "left_command",
+  r_cmd: "right_command",
+  r_command: "right_command",
+  rcmd: "right_command",
+  rcommand: "right_command",
+  right_cmd: "right_command",
+
+  // control
+  ctrl: "left_control",
+  control: "left_control",
+  l_control: "left_control",
+  l_ctrl: "left_control",
+  lcontrol: "left_control",
+  lctrl: "left_control",
   left_ctrl: "left_control",
+  r_control: "right_control",
+  r_ctrl: "right_control",
+  rcontrol: "right_control",
+  rctrl: "right_control",
+  right_ctrl: "right_control",
+
+  // escape
+  esc: "escape",
+
+  // grave_accent_and_tilde
+  grave: "grave_accent_and_tilde",
+  accent: "grave_accent_and_tilde",
+  tilde: "grave_accent_and_tilde",
+
+  // hyper
+  hyper: "left_command left_control left_option left_shift",
+
+  // option
+  opt: "left_option",
+  option: "left_option",
+  l_opt: "left_option",
+  l_option: "left_option",
   left_opt: "left_option",
   lopt: "left_option",
-  lshift: "left_shift",
-  opt: "left_option",
-  r_cmd: "right_command",
-  r_ctrl: "right_control",
+  loption: "left_option",
   r_opt: "right_option",
-  r_shift: "right_shift",
-  rcmd: "right_command",
-  rctrl: "right_control",
-  right_cmd: "right_command",
-  right_ctrl: "right_control",
+  r_option: "right_option",
   right_opt: "right_option",
   ropt: "right_option",
-  rshift: "right_shift",
+  roption: "right_option",
+
+  // shift
   shift: "left_shift",
+  l_shift: "left_shift",
+  lshift: "left_shift",
+  r_shift: "right_shift",
+  rshift: "right_shift",
 }
