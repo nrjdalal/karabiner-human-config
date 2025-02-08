@@ -225,8 +225,7 @@ You can then manually copy and paste it into your `karabiner.json` file.
 - [Usage](#usage)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
-- [Configuration](#configuration)
-  - [Add App Names for Specific Bindings](#add-app-names-for-specific-bindings)
+- [App Names for Specific Bindings](#app-names-for-specific-bindings)
 - [Advanced Usage for From Events](#advanced-usage-for-from-events)
   - [Optional Modifiers](#optional-modifiers)
 - [Advanced Usage for To Events](#advanced-usage-for-to-events)
@@ -237,7 +236,9 @@ You can then manually copy and paste it into your `karabiner.json` file.
 - [Manipulator Key's Aliases](#manipulator-keys-aliases)
 - [Future Considerations](#future-considerations)
 
-## Add App Names for Specific Bindings
+<br/>
+
+## App Names for Specific Bindings
 
 ```json
 {
@@ -253,6 +254,8 @@ You can then manually copy and paste it into your `karabiner.json` file.
 ```
 
 Bonus: You can use app names instead of bundle identifiers. Let KHC handle the rest.
+
+<br/>
 
 ## Advanced Usage for From Events
 
@@ -497,7 +500,7 @@ Use object insetad of string `{ to: ..., to_if_alone: ... }` to specify multiple
 - hyper: `left_command left_control left_option left_shift`
 - left_command: `lcmd` `l_cmd` `left_cmd`
 
-Check out [custom-keys.ts](constants/custom-keys.ts) for more.
+Check out [custom-aliases.ts](constants/custom-aliases.ts) for more.
 
 ## Manipulator Key's Aliases
 
@@ -505,8 +508,9 @@ Check out [custom-keys.ts](constants/custom-keys.ts) for more.
 - `a` for `to_if_alone`
 - `h` for `to_if_held_down`
 
-Check out [manipulators-keys.ts](constants/manipulators-keys.ts) for more.
+Check out [manipulator-keys.ts](constants/manipulator-keys.ts) for more.
 
 ## Future Considerations
 
 - support for variables
+- you tell me, I just got to know about Karabiner-Elements 3 days ago
