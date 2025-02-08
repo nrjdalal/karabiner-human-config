@@ -1,12 +1,16 @@
 import { splitAtFirstMatch } from "@/utils"
+import { customKeys } from "~/constants"
 
 export const from = (str: string) => {
-  str = str.replace(/\s+/g, " ")
+  let [pre, post] = splitAtFirstMatch(str, "|")
 
-  const [pre, post] = splitAtFirstMatch(str, "|")
+  for (const [key, value] of Object.entries(customKeys)) {
+    pre = pre.replace(new RegExp(`\\b${key}\\b`, "g"), value)
+    post = post?.replace(new RegExp(`\\b${key}\\b`, "g"), value)
+  }
 
   const preParts = pre.split(" ")
-  const any = preParts.pop()
+  const key_code = preParts.pop()
   const mandatoryModifiers = preParts
   const optionalModifiers = post ? post.split(" ") : []
 
@@ -16,7 +20,7 @@ export const from = (str: string) => {
   }
 
   return {
-    any,
+    key_code,
     ...(Object.keys(modifiers).length && { modifiers }),
   }
 }

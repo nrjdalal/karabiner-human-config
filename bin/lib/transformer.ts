@@ -1,5 +1,3 @@
-import fs from "fs/promises"
-import { join } from "path"
 import {
   regexifyBundleId,
   renameKeys,
@@ -14,18 +12,7 @@ import { toAfterKeyUp } from "./to-after-key-up"
 import { toIfAlone } from "./to-if-alone"
 import { toIfHeldDown } from "./to-if-held-down"
 
-const test = {
-  fn: { t: "fn", a: "left_command tab" },
-  "fn spacebar | test": "lazy left_command spacebar",
-  "fn v": "halt $ open '/Applications/Visual Studio Code.app'",
-  "hyper | spacebar": "left_command spacebar",
-  caps_lock: { t: "100 hyper", a: "100 caps_lock" },
-  "Visual Studio Code": {
-    fn: { t: "fn", a: "left_command tab" },
-  },
-}
-
-export const transformConfig = async ({
+export const rules = async ({
   app,
   bundleId,
   config,
@@ -40,7 +27,7 @@ export const transformConfig = async ({
     if (typeof value === "string") value = { to: value }
 
     if (startsWithCapital(key)) {
-      const appConfig = await transformConfig({
+      const appConfig = await rules({
         app: key.toLowerCase(),
         bundleId: regexifyBundleId(await bid(key)),
         config: value,
@@ -77,15 +64,3 @@ export const transformConfig = async ({
 
   return result
 }
-
-await fs.writeFile(
-  join(process.cwd(), ".logfile"),
-  JSON.stringify(
-    await transformConfig({
-      config: test,
-    }),
-    null,
-    2,
-  ),
-  "utf-8",
-)

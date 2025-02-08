@@ -1,4 +1,5 @@
 import { extractFlags, extractTimeout, splitAtFirstMatch } from "@/utils"
+import { customKeys } from "~/constants"
 
 export const to = (
   input:
@@ -9,7 +10,12 @@ export const to = (
 ) => {
   if (typeof input === "object") return input
 
-  const [pre, post] = splitAtFirstMatch(input, "$")
+  let [pre, post] = splitAtFirstMatch(input, "$")
+
+  for (const [key, value] of Object.entries(customKeys)) {
+    pre = pre.replace(new RegExp(`\\b${key}\\b`, "g"), value)
+  }
+
   const [rest, flags] = extractFlags(pre)
   const [modifiers, ms] = extractTimeout(rest.join(" "))
 
@@ -25,7 +31,7 @@ export const to = (
 
   return [
     {
-      any: modifiers.pop(),
+      key_code: modifiers.pop(),
       ...(modifiers.length && { modifiers }),
       ...flags,
       ...ms,
