@@ -14,7 +14,7 @@ Creating configuration files for [Karabiner-Elements](https://github.com/pqrs-or
 
 ## Usage
 
-Just create a new configuration file `karabiner.human.json`:
+Just create a new `konfig.json` file:
 
 - Don't hold back on the [comments](#comments).
 - Use [custom aliases](#custom-aliases) like `caps` `hyper` `cmd` `ctrl` etc.
@@ -227,8 +227,9 @@ And voila! From 10-15 lines to 170+ lines of configuration in just a few seconds
 
 <br/>
 
-The generated configuration will be logged to the console.
-You can then manually copy and paste it into your `karabiner.json` file.
+The generated configuration will be saved in `karabiner.json` in the same directory.
+
+If you wish to checkout my personal configuration, you can find it [here](konfig.json).
 
 <br/>
 

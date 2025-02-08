@@ -1,0 +1,16 @@
+{
+  "caps": { "t": "hyper", "a": "100 caps" },
+  "fn": {
+    "_self": { "t": "fn", "a": "cmd tab" }
+  },
+  "rcmd": {
+    "_self": "rcmd",
+    "c": "$ open https://github.com/copilot",
+    "g": "$ open https://mail.google.com/mail/u/0/#inbox",
+    "r": "$ open https://github.com/nrjdalal?tab=repositories",
+    "n": "$ open \"https://github.com/nrjdalal/notes/new/main?message=$(date +%s)&filename=$(date +%s).md\""
+  },
+  "Visual Studio Code": {
+    "fn tilde": "ctrl tilde" // Show integrated terminal
+  }
+}

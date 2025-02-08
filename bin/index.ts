@@ -14,8 +14,8 @@ Usage:
   $ ${name} [options]
 
 Options:
-  -i, --input    Input file path
-                 Default: Current directory
+  -i, --input    Input file path (default: konfig.json)
+  -o, --output   Output file path (default: karabiner.json)
   -v, --version  Display version number
   -h, --help     Display help message
 
@@ -39,7 +39,7 @@ const main = async () => {
         help: { type: "boolean", short: "h" },
         version: { type: "boolean", short: "v" },
         // for development purposes
-        logfile: { type: "boolean" },
+        logfile: { type: "boolean", short: "l" },
       },
     })
 
@@ -53,62 +53,63 @@ const main = async () => {
       process.exit(0)
     }
 
-    if (values.input) {
-      const config = {
-        input:
-          values.input === "auto"
-            ? path.resolve(process.cwd() + "/karabiner.human.json")
-            : path.resolve(values.input),
-        output:
-          values.output === "auto"
-            ? path.resolve(os.homedir + "/.config/karabiner/karabiner.json")
-            : path.resolve(values.output),
-      }
-
-      if (!fs.existsSync(config.input)) {
-        throw new Error(
-          `No input file: ${values.input === "auto" ? "karabiner.human.json" : config.input}`,
-        )
-      }
-
-      const userConfig = JSON.parse(
-        stripJsonComments(fs.readFileSync(config.input, "utf-8")),
-      )
-
-      const finalConfig = {
-        global: {
-          show_in_menu_bar: false,
-        },
-        profiles: [
-          {
-            complex_modifications: {
-              rules: (
-                await rules({
-                  config: userConfig,
-                })
-              ).map((rule) => ({
-                manipulators: [rule],
-              })),
-            },
-            name: "nrjdalal",
-            selected: true,
-            virtual_hid_keyboard: {
-              keyboard_type_v2: "ansi",
-            },
-          },
-        ],
-      }
-
-      if (values.logfile) {
-        fs.writeFileSync(
-          path.resolve(process.cwd() + "/.logfile"),
-          JSON.stringify(finalConfig, null, 2),
-        )
-        process.exit(0)
-      }
-
-      console.log(JSON.stringify(finalConfig, null, 2))
+    const config = {
+      input:
+        values.input === "auto"
+          ? path.resolve(process.cwd() + "/konfig.json")
+          : path.resolve(values.input),
+      output:
+        values.output === "auto"
+          ? path.resolve(process.cwd() + "/karabiner.json")
+          : path.resolve(values.output),
     }
+
+    if (!fs.existsSync(config.input)) {
+      throw new Error(
+        `No input file found at path: ${config.input}\n\n${helpMessage}`,
+      )
+    }
+
+    const userConfig = JSON.parse(
+      stripJsonComments(fs.readFileSync(config.input, "utf-8")),
+    )
+
+    const finalConfig = {
+      global: {
+        show_in_menu_bar: false,
+      },
+      profiles: [
+        {
+          complex_modifications: {
+            rules: (
+              await rules({
+                config: userConfig,
+              })
+            ).map((rule) => ({
+              manipulators: [rule],
+            })),
+          },
+          name: "nrjdalal",
+          selected: true,
+          virtual_hid_keyboard: {
+            keyboard_type_v2: "ansi",
+          },
+        },
+      ],
+    }
+
+    if (values.logfile) {
+      fs.writeFileSync(
+        path.resolve(process.cwd() + "/.logfile.json"),
+        JSON.stringify(finalConfig, null, 2),
+      )
+      process.exit(0)
+    }
+
+    fs.writeFileSync(
+      path.resolve(config.output),
+      JSON.stringify(finalConfig, null, 2),
+    )
 
     process.exit(0)
   } catch (err: any) {
