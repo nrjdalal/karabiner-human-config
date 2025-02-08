@@ -1,6 +1,6 @@
 {
   "name": "karabiner-human-config",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "A human-readable configuration generator for Karabiner-Elements",
   "keywords": [
     "elements",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/nrjdalal/karabiner-human-config#readme",
   "bugs": "https://github.com/nrjdalal/karabiner-human-config/issues",
   "repository": "nrjdalal/karabiner-human-config",
+  "funding": "https://github.com/sponsors/nrjdalal",
   "license": "MIT",
   "author": {
     "name": "Neeraj Dalal",
@@ -59,17 +60,17 @@
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.10",
-    "@commitlint/cli": "^19.6.0",
-    "@commitlint/config-conventional": "^19.6.0",
-    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
+    "@changesets/cli": "^2.27.12",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "@types/bundle-id": "^3.0.0",
-    "@types/node": "^22.10.1",
-    "lint-staged": "^15.2.10",
+    "@types/node": "^22.13.1",
+    "lint-staged": "^15.4.3",
     "prettier": "^3.4.2",
     "simple-git-hooks": "^2.11.1",
     "sort-package-json": "^2.14.0",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
   }
 }
