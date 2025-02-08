@@ -1,6 +1,6 @@
 {
-  "name": "karabiner-human-config",
-  "version": "0.11.0",
+  "name": "khc",
+  "version": "0.11.1",
   "description": "The easiest way to write Karabiner-Elements configuration files, ever!",
   "keywords": [
     "elements",
@@ -16,8 +16,8 @@
     "remapping",
     "shortcuts"
   ],
-  "homepage": "https://rdt.li/github-khc#readme",
-  "bugs": "https://rdt.li/github-khc/issues",
+  "homepage": "https://rdt.li/github-khc",
+  "bugs": "https://rdt.li/khc-issues",
   "repository": "nrjdalal/karabiner-human-config",
   "funding": "https://github.com/sponsors/nrjdalal",
   "license": "MIT",
