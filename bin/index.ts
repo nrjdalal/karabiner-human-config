@@ -65,9 +65,11 @@ const main = async () => {
     }
 
     if (!fs.existsSync(config.input)) {
-      throw new Error(
-        `No input file found at path: ${config.input}\n\n${helpMessage}`,
+      console.log(helpMessage)
+      console.error(
+        `\x1b[31m\nInput file doesn't exist: ${config.input}\n\x1b[0m`,
       )
+      process.exit(1)
     }
 
     const userConfig = JSON.parse(

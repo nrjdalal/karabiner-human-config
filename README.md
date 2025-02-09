@@ -235,6 +235,11 @@ If you wish to checkout my personal configuration, you can find it [here](konfig
 
 ## Table of Contents
 
+- [CLI Usage](#cli-usage)
+  - [With Default Options](#with-default-options)
+  - [With Custom Input](#with-custom-input)
+  - [With Custom Output](#with-custom-output)
+  - [With Custom Input and Output](#with-custom-input-and-output)
 - [Types of Addressing](#types-of-addressing)
   - [Comments](#comments)
   - [Direct Keys](#direct-keys)
@@ -250,6 +255,51 @@ If you wish to checkout my personal configuration, you can find it [here](konfig
   - [Custom Aliases](#custom-aliases)
   - [Manipulator Key's Aliases](#manipulator-keys-aliases)
 - [Future Considerations](#future-considerations)
+
+<br/>
+
+## CLI Usage
+
+```
+Version:
+  karabiner-human-config@0.11.2
+
+Usage:
+  $ karabiner-human-config [options]
+
+Options:
+  -i, --input    Input file path (default: konfig.json)
+  -o, --output   Output file path (default: karabiner.json)
+  -v, --version  Display version number
+  -h, --help     Display help message
+
+Author:
+  Neeraj Dalal <admin@nrjdalal.com> (https://nrjdalal.com)
+```
+
+### With Default Options
+
+```bash
+npx karabiner-human-config
+```
+
+### With Custom Input
+
+```bash
+npx karabiner-human-config -i konfig.json
+```
+
+### With Custom Output
+
+```bash
+npx karabiner-human-config -o karabiner.json
+```
+
+### With Custom Input and Output
+
+```bash
+npx karabiner-human-config -i konfig.json -o karabiner.json
+```
 
 <br/>
 
