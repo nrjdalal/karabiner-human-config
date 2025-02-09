@@ -102,7 +102,7 @@ const main = async () => {
 
     if (values.logfile) {
       fs.writeFileSync(
-        path.resolve(process.cwd() + "/.logfile.json"),
+        path.resolve(process.cwd() + "/.logfile"),
         JSON.stringify(finalConfig, null, 2),
       )
       process.exit(0)

@@ -229,7 +229,8 @@ And voila! From 10-15 lines to 170+ lines of configuration in just a few seconds
 
 The generated configuration will be saved in `karabiner.json` in the same directory.
 
-If you wish to checkout my personal configuration, you can find it [here](konfig.json).
+<em>**Bonus: If you wish to checkout my personal configuration, you can find it [here](konfig.json).
+And what it generates [here](karabiner.json).**</em>
 
 <br/>
 
@@ -237,8 +238,6 @@ If you wish to checkout my personal configuration, you can find it [here](konfig
 
 - [CLI Usage](#cli-usage)
   - [With Default Options](#with-default-options)
-  - [With Custom Input](#with-custom-input)
-  - [With Custom Output](#with-custom-output)
   - [With Custom Input and Output](#with-custom-input-and-output)
 - [Types of Addressing](#types-of-addressing)
   - [Comments](#comments)
@@ -262,7 +261,7 @@ If you wish to checkout my personal configuration, you can find it [here](konfig
 
 ```
 Version:
-  karabiner-human-config@0.11.2
+  karabiner-human-config@x.x.x
 
 Usage:
   $ karabiner-human-config [options]
@@ -283,19 +282,9 @@ Author:
 npx karabiner-human-config
 ```
 
-### With Custom Input
-
-```bash
-npx karabiner-human-config -i konfig.json
-```
-
-### With Custom Output
-
-```bash
-npx karabiner-human-config -o karabiner.json
-```
-
 ### With Custom Input and Output
+
+You can use either/both of the options.
 
 ```bash
 npx karabiner-human-config -i konfig.json -o karabiner.json
