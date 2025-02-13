@@ -9,7 +9,6 @@
           {
             "manipulators": [
               {
-                "type": "basic",
                 "description": "caps",
                 "from": {
                   "key_code": "caps_lock"
@@ -22,17 +21,17 @@
                 ],
                 "to_if_alone": [
                   {
-                    "key_code": "caps_lock",
-                    "hold_down_milliseconds": 100
+                    "hold_down_milliseconds": 100,
+                    "key_code": "caps_lock"
                   }
-                ]
+                ],
+                "type": "basic"
               }
             ]
           },
           {
             "manipulators": [
               {
-                "type": "basic",
                 "description": "fn",
                 "from": {
                   "key_code": "fn"
@@ -47,14 +46,14 @@
                     "key_code": "tab",
                     "modifiers": ["left_command"]
                   }
-                ]
+                ],
+                "type": "basic"
               }
             ]
           },
           {
             "manipulators": [
               {
-                "type": "basic",
                 "description": "rcmd",
                 "from": {
                   "key_code": "right_command"
@@ -63,14 +62,14 @@
                   {
                     "key_code": "right_command"
                   }
-                ]
+                ],
+                "type": "basic"
               }
             ]
           },
           {
             "manipulators": [
               {
-                "type": "basic",
                 "description": "rcmd c",
                 "from": {
                   "key_code": "c",
@@ -82,14 +81,14 @@
                   {
                     "shell_command": "open https://github.com/copilot"
                   }
-                ]
+                ],
+                "type": "basic"
               }
             ]
           },
           {
             "manipulators": [
               {
-                "type": "basic",
                 "description": "rcmd g",
                 "from": {
                   "key_code": "g",
@@ -101,14 +100,14 @@
                   {
                     "shell_command": "open https://mail.google.com/mail/u/0/#inbox"
                   }
-                ]
+                ],
+                "type": "basic"
               }
             ]
           },
           {
             "manipulators": [
               {
-                "type": "basic",
                 "description": "rcmd r",
                 "from": {
                   "key_code": "r",
@@ -120,14 +119,14 @@
                   {
                     "shell_command": "open https://github.com/nrjdalal?tab=repositories"
                   }
-                ]
+                ],
+                "type": "basic"
               }
             ]
           },
           {
             "manipulators": [
               {
-                "type": "basic",
                 "description": "rcmd n",
                 "from": {
                   "key_code": "n",
@@ -139,14 +138,20 @@
                   {
                     "shell_command": "open \"https://github.com/nrjdalal/notes/new/main?message=$(date +%s)&filename=$(date +%s).md\""
                   }
-                ]
+                ],
+                "type": "basic"
               }
             ]
           },
           {
             "manipulators": [
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
                 "description": "visual studio code fn tilde",
                 "from": {
                   "key_code": "grave_accent_and_tilde",
@@ -160,19 +165,23 @@
                     "modifiers": ["left_control"]
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
-                  }
-                ]
+                "type": "basic"
               }
             ]
           }
         ]
       },
-      "name": "nrjdalal",
-      "selected": true,
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 45915,
+            "vendor_id": 1133
+          },
+          "ignore": false
+        }
+      ],
       "virtual_hid_keyboard": {
         "keyboard_type_v2": "ansi"
       }

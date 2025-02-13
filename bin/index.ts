@@ -61,6 +61,8 @@ const main = async () => {
       output:
         values.output === "auto"
           ? path.resolve(process.cwd() + "/karabiner.json")
+            ? path.resolve(process.cwd() + "/karabiner.json")
+            : path.resolve(os.homedir() + "/.config/karabiner/karabiner.json")
           : path.resolve(values.output),
     }
 
@@ -72,14 +74,21 @@ const main = async () => {
       process.exit(1)
     }
 
+    let existingConfig: { profiles?: any[] } = {}
+    try {
+      existingConfig = JSON.parse(fs.readFileSync(config.output, "utf-8"))
+    } catch {
+      console.log(
+        `\x1b[33m\nOutput file doesn't exist: ${config.output}\n\x1b[0m`,
+      )
+    }
+
     const userConfig = JSON.parse(
       stripJsonComments(fs.readFileSync(config.input, "utf-8")),
     )
 
     const finalConfig = {
-      global: {
-        show_in_menu_bar: false,
-      },
+      ...existingConfig,
       profiles: [
         {
           complex_modifications: {
@@ -91,11 +100,7 @@ const main = async () => {
               manipulators: [rule],
             })),
           },
-          name: "nrjdalal",
-          selected: true,
-          virtual_hid_keyboard: {
-            keyboard_type_v2: "ansi",
-          },
+          ...existingConfig.profiles?.[0],
         },
       ],
     }

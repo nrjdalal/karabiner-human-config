@@ -1,10 +1,16 @@
 {
-  "hyper spacebar": "left_command spacebar",
-  "caps_lock": { "to": "hyper", "to_if_alone": "100 caps_lock" },
-  "fn": { "to": "fn", "to_if_alone": "left_command tab" },
-  "fn spacebar": "left_command spacebar",
-  "fn v": "$ open '/Applications/Visual Studio Code.app'",
+  "caps": { "t": "hyper", "a": "100 caps" },
+  "fn": {
+    "_self": { "t": "fn", "a": "cmd tab" }
+  },
+  "rcmd": {
+    "_self": "rcmd",
+    "c": "$ open https://github.com/copilot",
+    "g": "$ open https://mail.google.com/mail/u/0/#inbox",
+    "r": "$ open https://github.com/nrjdalal?tab=repositories",
+    "n": "$ open \"https://github.com/nrjdalal/notes/new/main?message=$(date +%s)&filename=$(date +%s).md\""
+  },
   "Visual Studio Code": {
-    "fn grave_accent_and_tilde": "left_control grave_accent_and_tilde"
+    "fn tilde": "ctrl tilde" // Show integrated terminal
   }
 }
