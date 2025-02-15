@@ -91,6 +91,7 @@ const main = async () => {
       ...existingConfig,
       profiles: [
         {
+          ...existingConfig.profiles?.[0],
           complex_modifications: {
             rules: (
               await rules({
@@ -100,7 +101,6 @@ const main = async () => {
               manipulators: [rule],
             })),
           },
-          ...existingConfig.profiles?.[0],
         },
       ],
     }

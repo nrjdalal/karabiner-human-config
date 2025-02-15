@@ -10,6 +10,7 @@
     "r": "$ open https://github.com/nrjdalal?tab=repositories"
   },
   "Visual Studio Code": {
-    "fn tilde": "ctrl tilde" // Show integrated terminal
+    "fn tilde": "ctrl tilde", // Show integrated terminal
+    "fn e": "cmd shift e" // View: Show explorer
   }
 }
