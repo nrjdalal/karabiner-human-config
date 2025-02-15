@@ -128,84 +128,6 @@
             "manipulators": [
               {
                 "type": "basic",
-                "description": "visual studio code fn r",
-                "from": {
-                  "key_code": "r",
-                  "modifiers": {
-                    "mandatory": ["fn"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f2",
-                    "modifiers": ["left_command", "fn"]
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "manipulators": [
-              {
-                "type": "basic",
-                "description": "visual studio code fn c",
-                "from": {
-                  "key_code": "c",
-                  "modifiers": {
-                    "mandatory": ["fn"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "p",
-                    "modifiers": ["left_command", "left_shift"]
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "manipulators": [
-              {
-                "type": "basic",
-                "description": "visual studio code fn f",
-                "from": {
-                  "key_code": "f",
-                  "modifiers": {
-                    "mandatory": ["fn"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f",
-                    "modifiers": ["left_command"]
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "manipulators": [
-              {
-                "type": "basic",
                 "description": "visual studio code fn 1",
                 "from": {
                   "key_code": "1",
@@ -258,6 +180,32 @@
             "manipulators": [
               {
                 "type": "basic",
+                "description": "visual studio code fn f",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": ["fn"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f2",
+                    "modifiers": ["left_command", "fn"]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
                 "description": "visual studio code fn q",
                 "from": {
                   "key_code": "q",
@@ -269,6 +217,32 @@
                   {
                     "key_code": "b",
                     "modifiers": ["left_command"]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "visual studio code fn tab",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": ["fn"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers": ["left_command", "left_shift"]
                   }
                 ],
                 "conditions": [
