@@ -7,12 +7,13 @@
 ## Search and Replace
 
 - Find: `fn f` or `cmd f`
-- Select all occurrences of Find match: `fn a` or `cmd fn f2`
+- Select all occurrences of Find match: `fn r` or `cmd fn f2`
 
 ## Display
 
-- Show Explorer: `fn e` or `cmd shift e`
-- Show Source Control: `fn s` or `cmd shift g`
+- Toggle Sidebar visibility: `fn q` or `cmd b`
+- Show Explorer: `fn 1` or `cmd shift e`
+- Show Source Control: `fn 2` or `cmd shift g`
 - Show Extensions: `fn x` or `cmd shift x`
 
 ## Terminal
