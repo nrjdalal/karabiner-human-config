@@ -128,6 +128,136 @@
             "manipulators": [
               {
                 "type": "basic",
+                "description": "visual studio code fn a",
+                "from": {
+                  "key_code": "a",
+                  "modifiers": {
+                    "mandatory": ["fn"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f2",
+                    "modifiers": ["left_command", "fn"]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "visual studio code fn c",
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": ["fn"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers": ["left_command", "left_shift"]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "visual studio code fn f",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": ["fn"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f",
+                    "modifiers": ["left_command"]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "visual studio code fn e",
+                "from": {
+                  "key_code": "e",
+                  "modifiers": {
+                    "mandatory": ["fn"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "e",
+                    "modifiers": ["left_command", "left_shift"]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "visual studio code fn s",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": ["fn"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "g",
+                    "modifiers": ["left_control", "left_shift"]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
                 "description": "visual studio code fn tilde",
                 "from": {
                   "key_code": "grave_accent_and_tilde",
@@ -154,16 +284,16 @@
             "manipulators": [
               {
                 "type": "basic",
-                "description": "visual studio code fn e",
+                "description": "visual studio code fn x",
                 "from": {
-                  "key_code": "e",
+                  "key_code": "x",
                   "modifiers": {
                     "mandatory": ["fn"]
                   }
                 },
                 "to": [
                   {
-                    "key_code": "e",
+                    "key_code": "x",
                     "modifiers": ["left_command", "left_shift"]
                   }
                 ],
