@@ -80,7 +80,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open https://github.com/copilot"
+                    "shell_command": "open \"https://github.com/copilot\""
                   }
                 ]
               }
@@ -99,7 +99,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open https://mail.google.com/mail/u/0/#inbox"
+                    "shell_command": "open \"https://mail.google.com/mail/u/0/#inbox\""
                   }
                 ]
               }
@@ -118,7 +118,99 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open https://github.com/nrjdalal?tab=repositories"
+                    "shell_command": "open \"https://github.com/nrjdalal?tab=repositories\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "rcmd s",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": ["right_command"]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://github.com/search?type=repositories&s=stars&o=desc\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "ropt",
+                "from": {
+                  "key_code": "right_option"
+                },
+                "to": [
+                  {
+                    "key_code": "right_option"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "ropt g",
+                "from": {
+                  "key_code": "g",
+                  "modifiers": {
+                    "mandatory": ["right_option"]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Google Chrome\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "ropt q",
+                "from": {
+                  "key_code": "q",
+                  "modifiers": {
+                    "mandatory": ["right_option"]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"qBittorrent\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "ropt v",
+                "from": {
+                  "key_code": "v",
+                  "modifiers": {
+                    "mandatory": ["right_option"]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Visual Studio Code\""
                   }
                 ]
               }
