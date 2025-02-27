@@ -8,7 +8,8 @@
     "c": "$ open \"https://github.com/copilot\"",
     "g": "$ open \"https://mail.google.com/mail/u/0/#inbox\"",
     "r": "$ open \"https://github.com/nrjdalal?tab=repositories\"",
-    "s": "$ open \"https://github.com/search?type=repositories&s=stars&o=desc\""
+    "s": "$ open \"https://github.com/search?type=repositories&s=stars&o=desc\"",
+    "w": "$ open \"https://web.whatsapp.com/\""
   },
   "ropt": {
     "_self": "ropt",

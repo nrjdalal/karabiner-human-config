@@ -147,6 +147,25 @@
             "manipulators": [
               {
                 "type": "basic",
+                "description": "rcmd w",
+                "from": {
+                  "key_code": "w",
+                  "modifiers": {
+                    "mandatory": ["right_command"]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://web.whatsapp.com/\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
                 "description": "ropt",
                 "from": {
                   "key_code": "right_option"
