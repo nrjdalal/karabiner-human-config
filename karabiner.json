@@ -17,7 +17,11 @@
                 "to": [
                   {
                     "key_code": "left_shift",
-                    "modifiers": ["left_command", "left_control", "left_option"]
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
                   }
                 ],
                 "to_if_alone": [
@@ -45,7 +49,9 @@
                 "to_if_alone": [
                   {
                     "key_code": "tab",
-                    "modifiers": ["left_command"]
+                    "modifiers": [
+                      "left_command"
+                    ]
                   }
                 ]
               }
@@ -75,7 +81,9 @@
                 "from": {
                   "key_code": "c",
                   "modifiers": {
-                    "mandatory": ["right_command"]
+                    "mandatory": [
+                      "right_command"
+                    ]
                   }
                 },
                 "to": [
@@ -94,7 +102,9 @@
                 "from": {
                   "key_code": "g",
                   "modifiers": {
-                    "mandatory": ["right_command"]
+                    "mandatory": [
+                      "right_command"
+                    ]
                   }
                 },
                 "to": [
@@ -113,7 +123,9 @@
                 "from": {
                   "key_code": "r",
                   "modifiers": {
-                    "mandatory": ["right_command"]
+                    "mandatory": [
+                      "right_command"
+                    ]
                   }
                 },
                 "to": [
@@ -132,7 +144,9 @@
                 "from": {
                   "key_code": "s",
                   "modifiers": {
-                    "mandatory": ["right_command"]
+                    "mandatory": [
+                      "right_command"
+                    ]
                   }
                 },
                 "to": [
@@ -151,12 +165,35 @@
                 "from": {
                   "key_code": "w",
                   "modifiers": {
-                    "mandatory": ["right_command"]
+                    "mandatory": [
+                      "right_command"
+                    ]
                   }
                 },
                 "to": [
                   {
-                    "shell_command": "open \"https://web.whatsapp.com/\""
+                    "shell_command": "open \"https://web.whatsapp.com\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "rcmd x",
+                "from": {
+                  "key_code": "x",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://x.com/home\""
                   }
                 ]
               }
@@ -186,7 +223,9 @@
                 "from": {
                   "key_code": "g",
                   "modifiers": {
-                    "mandatory": ["right_option"]
+                    "mandatory": [
+                      "right_option"
+                    ]
                   }
                 },
                 "to": [
@@ -205,7 +244,9 @@
                 "from": {
                   "key_code": "q",
                   "modifiers": {
-                    "mandatory": ["right_option"]
+                    "mandatory": [
+                      "right_option"
+                    ]
                   }
                 },
                 "to": [
@@ -224,7 +265,9 @@
                 "from": {
                   "key_code": "v",
                   "modifiers": {
-                    "mandatory": ["right_option"]
+                    "mandatory": [
+                      "right_option"
+                    ]
                   }
                 },
                 "to": [
@@ -243,19 +286,26 @@
                 "from": {
                   "key_code": "1",
                   "modifiers": {
-                    "mandatory": ["fn"]
+                    "mandatory": [
+                      "fn"
+                    ]
                   }
                 },
                 "to": [
                   {
                     "key_code": "e",
-                    "modifiers": ["left_command", "left_shift"]
+                    "modifiers": [
+                      "left_command",
+                      "left_shift"
+                    ]
                   }
                 ],
                 "conditions": [
                   {
                     "type": "frontmost_application_if",
-                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                    "bundle_identifiers": [
+                      "^com\\.microsoft\\.VSCode$"
+                    ]
                   }
                 ]
               }
@@ -269,19 +319,26 @@
                 "from": {
                   "key_code": "2",
                   "modifiers": {
-                    "mandatory": ["fn"]
+                    "mandatory": [
+                      "fn"
+                    ]
                   }
                 },
                 "to": [
                   {
                     "key_code": "g",
-                    "modifiers": ["left_control", "left_shift"]
+                    "modifiers": [
+                      "left_control",
+                      "left_shift"
+                    ]
                   }
                 ],
                 "conditions": [
                   {
                     "type": "frontmost_application_if",
-                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                    "bundle_identifiers": [
+                      "^com\\.microsoft\\.VSCode$"
+                    ]
                   }
                 ]
               }
@@ -295,19 +352,26 @@
                 "from": {
                   "key_code": "f",
                   "modifiers": {
-                    "mandatory": ["fn"]
+                    "mandatory": [
+                      "fn"
+                    ]
                   }
                 },
                 "to": [
                   {
                     "key_code": "f2",
-                    "modifiers": ["left_command", "fn"]
+                    "modifiers": [
+                      "left_command",
+                      "fn"
+                    ]
                   }
                 ],
                 "conditions": [
                   {
                     "type": "frontmost_application_if",
-                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                    "bundle_identifiers": [
+                      "^com\\.microsoft\\.VSCode$"
+                    ]
                   }
                 ]
               }
@@ -321,19 +385,25 @@
                 "from": {
                   "key_code": "q",
                   "modifiers": {
-                    "mandatory": ["fn"]
+                    "mandatory": [
+                      "fn"
+                    ]
                   }
                 },
                 "to": [
                   {
                     "key_code": "b",
-                    "modifiers": ["left_command"]
+                    "modifiers": [
+                      "left_command"
+                    ]
                   }
                 ],
                 "conditions": [
                   {
                     "type": "frontmost_application_if",
-                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                    "bundle_identifiers": [
+                      "^com\\.microsoft\\.VSCode$"
+                    ]
                   }
                 ]
               }
@@ -347,19 +417,26 @@
                 "from": {
                   "key_code": "tab",
                   "modifiers": {
-                    "mandatory": ["fn"]
+                    "mandatory": [
+                      "fn"
+                    ]
                   }
                 },
                 "to": [
                   {
                     "key_code": "p",
-                    "modifiers": ["left_command", "left_shift"]
+                    "modifiers": [
+                      "left_command",
+                      "left_shift"
+                    ]
                   }
                 ],
                 "conditions": [
                   {
                     "type": "frontmost_application_if",
-                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                    "bundle_identifiers": [
+                      "^com\\.microsoft\\.VSCode$"
+                    ]
                   }
                 ]
               }
@@ -373,19 +450,25 @@
                 "from": {
                   "key_code": "grave_accent_and_tilde",
                   "modifiers": {
-                    "mandatory": ["fn"]
+                    "mandatory": [
+                      "fn"
+                    ]
                   }
                 },
                 "to": [
                   {
                     "key_code": "grave_accent_and_tilde",
-                    "modifiers": ["left_control"]
+                    "modifiers": [
+                      "left_control"
+                    ]
                   }
                 ],
                 "conditions": [
                   {
                     "type": "frontmost_application_if",
-                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                    "bundle_identifiers": [
+                      "^com\\.microsoft\\.VSCode$"
+                    ]
                   }
                 ]
               }
@@ -399,19 +482,26 @@
                 "from": {
                   "key_code": "x",
                   "modifiers": {
-                    "mandatory": ["fn"]
+                    "mandatory": [
+                      "fn"
+                    ]
                   }
                 },
                 "to": [
                   {
                     "key_code": "x",
-                    "modifiers": ["left_command", "left_shift"]
+                    "modifiers": [
+                      "left_command",
+                      "left_shift"
+                    ]
                   }
                 ],
                 "conditions": [
                   {
                     "type": "frontmost_application_if",
-                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"]
+                    "bundle_identifiers": [
+                      "^com\\.microsoft\\.VSCode$"
+                    ]
                   }
                 ]
               }
