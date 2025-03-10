@@ -77,6 +77,27 @@
             "manipulators": [
               {
                 "type": "basic",
+                "description": "rcmd a",
+                "from": {
+                  "key_code": "a",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://github.com/nrjdalal/awesome-templates\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
                 "description": "rcmd c",
                 "from": {
                   "key_code": "c",
@@ -109,7 +130,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open \"https://mail.google.com/mail/u/0/#inbox\""
+                    "shell_command": "open \"https://github.com/nrjdalal?tab=repositories\""
                   }
                 ]
               }
@@ -119,9 +140,9 @@
             "manipulators": [
               {
                 "type": "basic",
-                "description": "rcmd r",
+                "description": "rcmd m",
                 "from": {
-                  "key_code": "r",
+                  "key_code": "m",
                   "modifiers": {
                     "mandatory": [
                       "right_command"
@@ -130,7 +151,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open \"https://github.com/nrjdalal?tab=repositories\""
+                    "shell_command": "open \"https://mail.google.com/mail/u/0/#inbox\""
                   }
                 ]
               }
