@@ -161,6 +161,48 @@
             "manipulators": [
               {
                 "type": "basic",
+                "description": "rcmd n",
+                "from": {
+                  "key_code": "n",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://www.netflix.com/browse\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "rcmd p",
+                "from": {
+                  "key_code": "p",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://www.primevideo.com/\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
                 "description": "rcmd s",
                 "from": {
                   "key_code": "s",
