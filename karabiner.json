@@ -214,7 +214,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open \"https://www.primevideo.com/\""
+                    "shell_command": "open \"https://www.primevideo.com\""
                   }
                 ]
               }

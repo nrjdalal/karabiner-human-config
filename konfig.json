@@ -11,7 +11,7 @@
     "h": "$ open \"https://www.hotstar.com/in/home\"",
     "m": "$ open \"https://mail.google.com/mail/u/0/#inbox\"",
     "n": "$ open \"https://www.netflix.com/browse\"",
-    "p": "$ open \"https://www.primevideo.com/\"",
+    "p": "$ open \"https://www.primevideo.com\"",
     "s": "$ open \"https://github.com/search?type=repositories&s=stars&o=desc\"",
     "w": "$ open \"https://web.whatsapp.com\"",
     "x": "$ open \"https://x.com/home\"",
