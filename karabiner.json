@@ -287,6 +287,27 @@
             "manipulators": [
               {
                 "type": "basic",
+                "description": "rcmd y",
+                "from": {
+                  "key_code": "y",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://www.youtube.com\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
                 "description": "ropt",
                 "from": {
                   "key_code": "right_option"
