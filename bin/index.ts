@@ -56,13 +56,13 @@ const main = async () => {
     const config = {
       input:
         values.input === "auto"
-          ? path.resolve(process.cwd() + "/konfig.json")
+          ? path.resolve(process.cwd(), "/konfig.json")
           : path.resolve(values.input),
       output:
         values.output === "auto"
-          ? path.resolve(process.cwd() + "/karabiner.json")
-            ? path.resolve(process.cwd() + "/karabiner.json")
-            : path.resolve(os.homedir() + "/.config/karabiner/karabiner.json")
+          ? path.resolve(process.cwd(), "/karabiner.json")
+            ? path.resolve(process.cwd(), "/karabiner.json")
+            : path.resolve(os.homedir(), "/.config/karabiner/karabiner.json")
           : path.resolve(values.output),
     }
 
@@ -107,7 +107,7 @@ const main = async () => {
 
     if (values.logfile) {
       fs.writeFileSync(
-        path.resolve(process.cwd() + "/.logfile"),
+        path.resolve(process.cwd(), "/.logfile"),
         JSON.stringify(finalConfig, null, 2) + "\n",
       )
       process.exit(0)
