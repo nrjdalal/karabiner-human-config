@@ -6,6 +6,8 @@
   "rcmd": {
     "_self": "rcmd",
     // chat and social
+    "d": "$ open \"https://discord.com/channels/@me\"",
+    "k": "$ open \"https://www.instagram.com\"",
     "w": "$ open \"https://web.whatsapp.com\"",
     "x": "$ open \"https://x.com/home\"",
     // github links
