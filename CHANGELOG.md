@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.14.5
+
+[compare changes](https://github.com/nrjdalal/karabiner-human-config/compare/v0.14.4...v0.14.5)
+
+## v0.14.4...v0.14.4
+
+[compare changes](https://github.com/nrjdalal/karabiner-human-config/compare/v0.14.4...v0.14.4)
+
 ## v0.14.4
 
 [compare changes](https://github.com/nrjdalal/karabiner-human-config/compare/v0.14.3...v0.14.4)
