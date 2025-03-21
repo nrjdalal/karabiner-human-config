@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.14.6
+
+[compare changes](https://github.com/nrjdalal/karabiner-human-config/compare/v0.14.5...v0.14.6)
+
+### 🏡 Chore
+
+- Rewrite path.resolve statements to index.ts ~ 1 file 5+ 5- ([e1f4036](https://github.com/nrjdalal/karabiner-human-config/commit/e1f4036))
+
+### ❤️ Contributors
+
+- Neeraj Dalal <admin@nrjdalal.com>
+
+## v0.14.5...changelog-test
+
+[compare changes](https://github.com/nrjdalal/karabiner-human-config/compare/v0.14.5...changelog-test)
+
+### 🏡 Chore
+
+- Rewrite path.resolve statements to index.ts ~ 1 file 5+ 5- ([e1f4036](https://github.com/nrjdalal/karabiner-human-config/commit/e1f4036))
+
+### ❤️ Contributors
+
+- Neeraj Dalal <admin@nrjdalal.com>
+
 ## v0.14.5
 
 [compare changes](https://github.com/nrjdalal/karabiner-human-config/compare/v0.14.4...v0.14.5)
