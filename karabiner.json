@@ -90,9 +90,9 @@
             "manipulators": [
               {
                 "type": "basic",
-                "description": "rcmd k",
+                "description": "rcmd i",
                 "from": {
-                  "key_code": "k",
+                  "key_code": "i",
                   "modifiers": {
                     "mandatory": ["right_command"]
                   }
