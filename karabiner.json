@@ -118,7 +118,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open \"https://nsfw,langsdk.com\""
+                    "shell_command": "open \"https://nsfw.langsdk.com\""
                   }
                 ]
               }

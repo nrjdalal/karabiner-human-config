@@ -8,7 +8,7 @@
     // chat and social
     "d": "$ open \"https://discord.com/channels/@me\"",
     "i": "$ open \"https://www.instagram.com\"",
-    "l": "$ open \"https://nsfw,langsdk.com\"",
+    "l": "$ open \"https://nsfw.langsdk.com\"",
     "w": "$ open \"https://web.whatsapp.com\"",
     "x": "$ open \"https://x.com/home\"",
     // github links
