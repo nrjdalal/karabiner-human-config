@@ -15,7 +15,7 @@ Creating configuration files for [Karabiner-Elements](https://github.com/pqrs-or
 Just create a new `konfig.json` file:
 
 - Don't hold back on the [comments](#comments).
-- Use [custom aliases](#custom-aliases) like `caps` `hyper` `cmd` `ctrl` etc.
+- Can use [custom aliases](#custom-aliases) like `caps` `hyper` `cmd` `ctrl` etc.
 - Specify `t` `a` etc as [manipulator key's aliases](#manipulator-keys-aliases).
 - Prefix [flags and delays](#prefix-delay-and-flags) like `100` easily, if needed.
 - Use `$` for [shell command](#shell-command).
