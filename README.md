@@ -10,8 +10,6 @@ Find it on the official website of Karabiner-Elements at [external JSON generato
 
 Creating configuration files for [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) can be challenging. With Karabiner-Human-Config (KHC), you can effortlessly generate your own configuration files using human-readable/understandable syntax.
 
-<br/>
-
 ## Usage
 
 Just create a new `konfig.json` file:
