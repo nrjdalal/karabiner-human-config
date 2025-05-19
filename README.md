@@ -16,8 +16,8 @@ Just create a new `konfig.json` file:
 
 - Don't hold back on the [comments](#comments).
 - Can use [custom aliases](#custom-aliases) like `caps` `hyper` `cmd` `ctrl` etc.
-- Specify `t` `a` etc as [manipulator key's aliases](#manipulator-keys-aliases).
-- Prefix [flags and delays](#prefix-delay-and-flags) like `100` easily, if needed.
+- Can specify `t` `a` etc as [manipulator key's aliases](#manipulator-keys-aliases).
+- Easily prefix [flags and delays](#prefix-delay-and-flags) like `100` easily, if needed.
 - Use `$` for [shell command](#shell-command).
 - Just use the [app's name](#application-group-keys) like `Visual Studio Code`.
 
