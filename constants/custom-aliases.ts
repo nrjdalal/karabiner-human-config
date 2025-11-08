@@ -31,6 +31,9 @@ export const customAliases = {
   rctrl: "right_control",
   right_ctrl: "right_control",
 
+  // enter
+  enter: "return_or_enter",
+
   // escape
   esc: "escape",
 
