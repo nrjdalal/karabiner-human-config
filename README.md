@@ -28,7 +28,7 @@ Just create a new `konfig.json` file:
   "hyper spacebar": "cmd spacebar",
   // group
   "fn": {
-    "_self": { "t": "fn", "a": "cmd tab", "u": "enter" },
+    "_self": { "t": "fn", "a": "cmd tab" },
     "spacebar": "cmd spacebar",
     "v": "$ open -a 'Visual Studio Code'"
   },
@@ -129,11 +129,6 @@ And voila! From 10-15 lines to 170+ lines of configuration in just a few seconds
                     "modifiers": [
                       "left_command"
                     ]
-                  }
-                ],
-                "to_after_key_up": [
-                  {
-                    "key_code": "return_or_enter"
                   }
                 ]
               }
@@ -318,11 +313,11 @@ Instead of repeating the same key beginning, use group keys.
 
 ```diff
 {
--  "fn": { "t": "fn", "a": "cmd tab", "u": "enter" },
+-  "fn": { "t": "fn", "a": "cmd tab" },
 -  "fn spacebar": "cmd spacebar",
 -  "fn v": "$ open -a 'Visual Studio Code'",
 +  "fn": {
-+    "_self": { "t": "fn", "a": "cmd tab", "u": "enter" },
++    "_self": { "t": "fn", "a": "cmd tab" },
 +    "spacebar": "cmd spacebar",
 +    "v": "$ open -a 'Visual Studio Code'"
 +  }

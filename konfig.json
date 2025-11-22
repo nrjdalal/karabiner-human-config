@@ -1,7 +1,7 @@
 {
   "caps": { "t": "hyper", "a": "100 caps" },
   "fn": {
-    "_self": { "t": "fn", "a": "cmd tab", "u": "enter" }
+    "_self": { "t": "fn", "a": "cmd tab" }
   },
   "rcmd": {
     "_self": "rcmd",
@@ -30,7 +30,7 @@
     "q": "$ open -a \"qBittorrent\"",
     "v": "$ open -a \"Visual Studio Code\""
   },
-  "Visual Studio Code": {
+  "Cursor": {
     "fn 1": "cmd shift e",
     "fn 2": "ctrl shift g",
     "fn f": "cmd fn f2",
