@@ -12,7 +12,7 @@
         "@changesets/changelog-github": "^0.5.0",
         "@changesets/cli": "^2.27.12",
         "@commitlint/cli": "^19.7.1",
-        "@commitlint/config-conventional": "^19.7.1",
+        "@commitlint/config-conventional": "^20.0.0",
         "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
         "@types/bundle-id": "^3.0.0",
         "@types/node": "^22.13.1",
@@ -84,7 +84,7 @@
 
     "@commitlint/cli": ["@commitlint/cli@19.7.1", "", { "dependencies": { "@commitlint/format": "^19.5.0", "@commitlint/lint": "^19.7.1", "@commitlint/load": "^19.6.1", "@commitlint/read": "^19.5.0", "@commitlint/types": "^19.5.0", "tinyexec": "^0.3.0", "yargs": "^17.0.0" }, "bin": { "commitlint": "cli.js" } }, "sha512-iObGjR1tE/PfDtDTEfd+tnRkB3/HJzpQqRTyofS2MPPkDn1mp3DBC8SoPDayokfAy+xKhF8+bwRCJO25Nea0YQ=="],
 
-    "@commitlint/config-conventional": ["@commitlint/config-conventional@19.7.1", "", { "dependencies": { "@commitlint/types": "^19.5.0", "conventional-changelog-conventionalcommits": "^7.0.2" } }, "sha512-fsEIF8zgiI/FIWSnykdQNj/0JE4av08MudLTyYHm4FlLWemKoQvPNUYU2M/3tktWcCEyq7aOkDDgtjrmgWFbvg=="],
+    "@commitlint/config-conventional": ["@commitlint/config-conventional@20.2.0", "", { "dependencies": { "@commitlint/types": "^20.2.0", "conventional-changelog-conventionalcommits": "^7.0.2" } }, "sha512-MsRac+yNIbTB4Q/psstKK4/ciVzACHicSwz+04Sxve+4DW+PiJeTjU0JnS4m/oOnulrXYN+yBPlKaBSGemRfgQ=="],
 
     "@commitlint/config-validator": ["@commitlint/config-validator@19.5.0", "", { "dependencies": { "@commitlint/types": "^19.5.0", "ajv": "^8.11.0" } }, "sha512-CHtj92H5rdhKt17RmgALhfQt95VayrUo2tSqY9g2w+laAXyk7K/Ef6uPm9tn5qSIwSmrLjKaXK9eiNuxmQrDBw=="],
 
@@ -701,6 +701,8 @@
     "@changesets/apply-release-plan/prettier": ["prettier@2.8.8", "", { "bin": { "prettier": "bin-prettier.js" } }, "sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q=="],
 
     "@changesets/write/prettier": ["prettier@2.8.8", "", { "bin": { "prettier": "bin-prettier.js" } }, "sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q=="],
+
+    "@commitlint/config-conventional/@commitlint/types": ["@commitlint/types@20.2.0", "", { "dependencies": { "@types/conventional-commits-parser": "^5.0.0", "chalk": "^5.3.0" } }, "sha512-KTy0OqRDLR5y/zZMnizyx09z/rPlPC/zKhYgH8o/q6PuAjoQAKlRfY4zzv0M64yybQ//6//4H1n14pxaLZfUnA=="],
 
     "@commitlint/top-level/find-up": ["find-up@7.0.0", "", { "dependencies": { "locate-path": "^7.2.0", "path-exists": "^5.0.0", "unicorn-magic": "^0.1.0" } }, "sha512-YyZM99iHrqLKjmt4LJDj58KI+fYyufRLBSYcqycxf//KpBk9FoewoGX0450m9nB44qrZnovzC2oeP5hUibxc/g=="],
 
