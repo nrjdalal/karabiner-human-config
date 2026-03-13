@@ -8,7 +8,6 @@
     // chat and social
     "d": "$ open \"https://discord.com/channels/@me\"",
     "i": "$ open \"https://www.instagram.com\"",
-    "l": "$ open \"https://nsfw.langsdk.com\"",
     "w": "$ open \"https://web.whatsapp.com\"",
     "x": "$ open \"https://x.com/home\"",
     // github links
@@ -16,6 +15,7 @@
     "c": "$ open \"https://github.com/copilot\"",
     "g": "$ open \"https://github.com/nrjdalal?tab=repositories\"",
     "s": "$ open \"https://github.com/search?type=repositories&s=stars&o=desc\"",
+    "z": "$ open \"https://github.com/nrjdalal/zerostarter\"",
     // productivity
     "m": "$ open \"https://mail.google.com/mail/u/0/#inbox\"",
     // streaming services
@@ -26,9 +26,9 @@
   },
   "ropt": {
     "_self": "ropt",
+    "v": "$ open -a \"Cursor\"",
     "g": "$ open -a \"Google Chrome\"",
-    "q": "$ open -a \"qBittorrent\"",
-    "v": "$ open -a \"Visual Studio Code\""
+    "q": "$ open -a \"qBittorrent\""
   },
   "Cursor": {
     "fn 1": "cmd shift e",

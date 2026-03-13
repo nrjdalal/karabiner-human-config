@@ -119,27 +119,6 @@
             "manipulators": [
               {
                 "type": "basic",
-                "description": "rcmd l",
-                "from": {
-                  "key_code": "l",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_command"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "shell_command": "open \"https://nsfw.langsdk.com\""
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "manipulators": [
-              {
-                "type": "basic",
                 "description": "rcmd w",
                 "from": {
                   "key_code": "w",
@@ -257,6 +236,27 @@
                 "to": [
                   {
                     "shell_command": "open \"https://github.com/search?type=repositories&s=stars&o=desc\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
+                "description": "rcmd z",
+                "from": {
+                  "key_code": "z",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://github.com/nrjdalal/zerostarter\""
                   }
                 ]
               }
@@ -387,6 +387,27 @@
             "manipulators": [
               {
                 "type": "basic",
+                "description": "ropt v",
+                "from": {
+                  "key_code": "v",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Cursor\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "type": "basic",
                 "description": "ropt g",
                 "from": {
                   "key_code": "g",
@@ -420,27 +441,6 @@
                 "to": [
                   {
                     "shell_command": "open -a \"qBittorrent\""
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "manipulators": [
-              {
-                "type": "basic",
-                "description": "ropt v",
-                "from": {
-                  "key_code": "v",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "shell_command": "open -a \"Visual Studio Code\""
                   }
                 ]
               }
