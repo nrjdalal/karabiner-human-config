@@ -248,6 +248,10 @@ And what it generates [here](karabiner.json).**</em>
   - [Shell Command](#shell-command)
   - [Prefix Delay and Flags](#prefix-delay-and-flags)
   - [Specify Multiple Events](#specify-multiple-events)
+- [Conditions](#conditions)
+  - [Per-Manipulator Conditions](#per-manipulator-conditions)
+  - [Group-Level Conditions](#group-level-conditions)
+  - [Conditions-Only Groups](#conditions-only-groups)
 - [Alias](#alias)
   - [Custom Aliases](#custom-aliases)
   - [Manipulator Key's Aliases](#manipulator-keys-aliases)
@@ -576,6 +580,69 @@ Instead of strings, use objects like `{ to: ..., to_if_alone: ... }` to specify 
 
 <br/>
 
+## Conditions
+
+Add [Karabiner conditions](https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/conditions/) like `device_if`, `device_unless`, `input_source_if`, `variable_if`, `keyboard_type_if`, and more.
+
+### Per-Manipulator Conditions
+
+Use `c` (or `conditions`) to add conditions to a single manipulator.
+
+```json
+{
+  "caps": {
+    "t": "escape",
+    "c": [{ "type": "device_if", "identifiers": [{ "vendor_id": 1452 }] }]
+  }
+}
+```
+
+### Group-Level Conditions
+
+Use `_conditions` inside a group with `_self` to apply conditions to all manipulators in the group.
+
+```json
+{
+  "rcmd": {
+    "_self": "rcmd",
+    "_conditions": [
+      {
+        "type": "device_unless",
+        "identifiers": [{ "is_built_in_keyboard": true }]
+      }
+    ],
+    "d": "$ open \"https://discord.com\""
+  }
+}
+```
+
+Both `rcmd` (self) and `rcmd d` will have the `device_unless` condition applied.
+
+### Conditions-Only Groups
+
+Use `_conditions` without `_self` to scope conditions to a group of keys without a shared modifier.
+
+```json
+{
+  "external_keyboard": {
+    "_conditions": [
+      {
+        "type": "device_if",
+        "identifiers": [{ "vendor_id": 1234, "product_id": 5678 }]
+      }
+    ],
+    "a": { "t": "b" },
+    "caps": { "t": "escape" }
+  }
+}
+```
+
+The group key (`external_keyboard`) is just a label — child keys are processed as-is with the conditions inherited.
+
+Note: `_conditions` also works inside [application group keys](#application-group-keys) to combine device conditions with app-specific conditions.
+
+<br/>
+
 ## Alias
 
 - [key_codes by Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements/blob/main/src/apps/SettingsWindow/Resources/simple_modifications.json)
@@ -592,6 +659,7 @@ Check and add [custom-aliases.ts](constants/custom-aliases.ts) for more.
 - `t` for `to`
 - `a` for `to_if_alone`
 - `h` for `to_if_held_down`
+- `c` for `conditions`
 
 Check and add [manipulator-keys.ts](constants/manipulator-keys.ts) for more.
 
