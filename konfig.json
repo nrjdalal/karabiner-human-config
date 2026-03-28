@@ -30,6 +30,15 @@
     "g": "$ open -a \"Google Chrome\"",
     "q": "$ open -a \"qBittorrent\""
   },
+  "Code": {
+    "fn 1": "cmd shift e",
+    "fn 2": "ctrl shift g",
+    "fn f": "cmd fn f2",
+    "fn q": "cmd b",
+    "fn tab": "cmd shift p",
+    "fn tilde": "ctrl tilde",
+    "fn x": "cmd shift x"
+  },
   "Cursor": {
     "fn 1": "cmd shift e",
     "fn 2": "ctrl shift g",
