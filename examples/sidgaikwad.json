@@ -1,0 +1,25 @@
+{
+  // caps lock → hyper when held, caps lock when tapped
+  "caps": { "t": "hyper", "a": "100 caps" },
+
+  // fn as a layer: tap fn alone = cmd+tab (app switcher)
+  "fn": {
+    "_self": { "t": "fn", "a": "cmd tab" },
+
+    // --- Screenshots straight to clipboard ---
+    "s": "ctrl cmd shift 4", // snip an area → clipboard
+    "shift s": "ctrl cmd shift 3", // whole screen → clipboard
+    "5": "cmd shift 5", // screenshot & screen-recording toolbar
+
+    // --- Vim-style arrows (home-row navigation) ---
+    "h": "left_arrow",
+    "j": "down_arrow",
+    "k": "up_arrow",
+    "l": "right_arrow",
+
+    // --- Handy extras ---
+    "d": "delete_forward", // forward delete
+    "e": "ctrl cmd spacebar", // emoji & symbols picker
+    "spacebar": "cmd spacebar" // Spotlight
+  }
+}
