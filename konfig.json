@@ -1,40 +1,39 @@
 {
-  "caps": { "t": "hyper", "a": "100 caps" },
-  "fn": {
-    "_self": { "t": "fn", "a": "cmd tab" }
-  },
+  "caps | caps": { "t": "hyper", "a": "100 caps" },
+  // "| caps": still match while Caps Lock is on (Karabiner treats it as a held modifier)
+  "fn | caps": { "t": "fn", "a": "cmd tab" },
   "rcmd": {
     "_self": "rcmd",
     // chat and social
-    "d": "$ open \"https://discord.com/channels/@me\"",
-    "i": "$ open \"https://www.instagram.com\"",
-    "w": "$ open \"https://web.whatsapp.com\"",
-    "x": "$ open \"https://x.com/home\"",
+    "d | caps": "$ open \"https://discord.com/channels/@me\"",
+    "i | caps": "$ open \"https://www.instagram.com\"",
+    "w | caps": "$ open \"https://web.whatsapp.com\"",
+    "x | caps": "$ open \"https://x.com/home\"",
     // github links
-    "a": "$ open \"https://github.com/nrjdalal/awesome-templates\"",
-    "c": "$ open \"https://github.com/copilot\"",
-    "g": "$ open \"https://github.com/nrjdalal?tab=repositories\"",
-    "s": "$ open \"https://github.com/search?type=repositories&s=stars&o=desc\"",
-    "z": "$ open \"https://github.com/nrjdalal/zerostarter\"",
+    "a | caps": "$ open \"https://github.com/nrjdalal/awesome-templates\"",
+    "c | caps": "$ open \"https://github.com/copilot\"",
+    "g | caps": "$ open \"https://github.com/nrjdalal?tab=repositories\"",
+    "s | caps": "$ open \"https://github.com/search?type=repositories&s=stars&o=desc\"",
+    "z | caps": "$ open \"https://github.com/nrjdalal/zerostarter\"",
     // productivity
-    "m": "$ open \"https://mail.google.com/mail/u/0/#inbox\"",
+    "m | caps": "$ open \"https://mail.google.com/mail/u/0/#inbox\"",
     // streaming services
-    "h": "$ open \"https://www.hotstar.com/in/home\"",
-    "n": "$ open \"https://www.netflix.com/browse\"",
-    "p": "$ open \"https://www.primevideo.com\"",
-    "y": "$ open \"https://www.youtube.com\""
+    "h | caps": "$ open \"https://www.hotstar.com/in/home\"",
+    "n | caps": "$ open \"https://www.netflix.com/browse\"",
+    "p | caps": "$ open \"https://www.primevideo.com\"",
+    "y | caps": "$ open \"https://www.youtube.com\""
   },
   "ropt": {
     "_self": "ropt",
-    "g": "$ open -a \"Google Chrome\""
+    "g | caps": "$ open -a \"Google Chrome\""
   },
-  "Code": {
-    "fn 1": "cmd shift e",
-    "fn 2": "ctrl shift g",
-    "fn f": "cmd fn f2",
-    "fn q": "cmd b",
-    "fn tab": "cmd shift p",
-    "fn tilde": "ctrl tilde",
-    "fn x": "cmd shift x"
+  "Visual Studio Code": {
+    "fn 1 | caps": "cmd shift e",
+    "fn 2 | caps": "ctrl shift g",
+    "fn f | caps": "cmd fn f2",
+    "fn q | caps": "cmd b",
+    "fn tab | caps": "cmd shift p",
+    "fn tilde | caps": "ctrl tilde",
+    "fn x | caps": "cmd shift x"
   }
 }
