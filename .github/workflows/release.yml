@@ -7,6 +7,12 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
+permissions:
+  contents: write
+  # npm Trusted Publishing (OIDC): the registry trusts this repo+workflow; no NPM_TOKEN secret
+  id-token: write
+  pull-requests: write
+
 jobs:
   release:
     name: Release
@@ -23,7 +29,9 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          # 24 bundles npm >= 11.5.1, the floor for npm Trusted Publishing
+          node-version: 24
+          registry-url: https://registry.npmjs.org
 
       - name: Install Dependencies
         run: bun install --no-save
@@ -34,7 +42,7 @@ jobs:
       - id: CHECK_TOKENS
         name: Check if TOKENS are configured
         run: |
-          if [ -z "${{ secrets.GITHUB_TOKEN }}" ] || [ -z "${{ secrets.NPM_TOKEN }}" ]; then
+          if [ -z "${{ secrets.GITHUB_TOKEN }}" ]; then
             echo "TOKENS are not configured. Skipping changeset actions."
             echo "NOT_FOUND=true" >> $GITHUB_OUTPUT
           fi
@@ -50,4 +58,3 @@ jobs:
           publish: bun run publish:latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
